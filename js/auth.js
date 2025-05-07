@@ -9,8 +9,9 @@ const passwordInputs = document.querySelectorAll('input[type="password"]');
 const togglePasswordButtons = document.querySelectorAll('.toggle-password');
 
 // API Base URL (Replace with your Render backend URL)
-const API_BASE_URL = 'https://your-render-app.onrender.com/api';
-
+//const API_BASE_URL = 'https://your-render-app.onrender.com/api';
+// Replace with your Render backend URL
+const API_BASE_URL = "https://quizwiz-oscx.onrender.com/api";
 // Toggle Password Visibility
 togglePasswordButtons.forEach(button => {
     button.addEventListener('click', function() {
