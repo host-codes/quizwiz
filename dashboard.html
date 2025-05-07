@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Study Portal</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="dashboard-header">
+        <nav>
+            <div class="logo">StudyPortal</div>
+            <div class="user-menu">
+                <div class="user-avatar">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <span id="usernameDisplay"></span>
+                <div class="dropdown-menu">
+                    <a href="#" id="changePasswordLink">Change Password</a>
+                    <a href="#" id="logoutLink">Logout</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="dashboard-main">
+        <aside class="sidebar">
+            <ul>
+                <li class="active"><a href="#"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="#"><i class="fas fa-book"></i> Daily Tests</a></li>
+                <li><a href="#"><i class="fas fa-chart-line"></i> Progress</a></li>
+                <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+            </ul>
+        </aside>
+        <section class="content">
+            <h1>Welcome to Your Dashboard</h1>
+            <div class="stats-cards">
+                <div class="card">
+                    <h3>Tests Completed</h3>
+                    <p id="testsCompleted">0</p>
+                </div>
+                <div class="card">
+                    <h3>Current Streak</h3>
+                    <p id="currentStreak">0 days</p>
+                </div>
+                <div class="card">
+                    <h3>Accuracy</h3>
+                    <p id="accuracy">0%</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="changePasswordModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Change Password</h2>
+            <form id="changePasswordForm">
+                <div class="form-group">
+                    <label for="currentPassword">Current Password</label>
+                    <div class="password-input">
+                        <input type="password" id="currentPassword" required>
+                        <i class="fas fa-eye toggle-password"></i>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="newPassword">New Password</label>
+                    <div class="password-input">
+                        <input type="password" id="newPassword" required>
+                        <i class="fas fa-eye toggle-password"></i>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="confirmNewPassword">Confirm New Password</label>
+                    <div class="password-input">
+                        <input type="password" id="confirmNewPassword" required>
+                        <i class="fas fa-eye toggle-password"></i>
+                    </div>
+                </div>
+                <button type="submit" class="btn primary full-width">Change Password</button>
+            </form>
+        </div>
+    </div>
+    <script src="/js/auth.js"></script>
+    <script src="/js/dashboard.js"></script>
+</body>
+</html>
