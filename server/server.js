@@ -21,7 +21,55 @@ console.log('Environment Variables:', {
 });
 
 
+const nodemailer = require('nodemailer');
 const app = express();
+
+// 3. Configure Nodemailer (PASTE THIS BEFORE THE ROUTE)
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: 'your-email@gmail.com', // Replace with your email
+    pass: 'your-app-password'     // Use a 16-digit app password
+  }
+});
+
+
+
+// 4. ✅ PASTE YOUR CODE HERE (Signup route)
+app.post('/api/auth/signup', async (req, res) => {
+  const { name, email, password } = req.body;
+  
+  // 1. Save user to DB (MongoDB)
+  // 2. Generate OTP
+  const otp = Math.floor(100000 + Math.random() * 900000);
+  
+  // 3. Send OTP via email
+  await transporter.sendMail({
+    from: 'your-email@gmail.com',
+    to: email,
+    subject: 'Your OTP for Verification',
+    text: `Your OTP is: ${otp}`
+  });
+
+  // 4. Respond to frontend
+  res.json({ success: true, message: 'OTP sent to email!' });
+});
+
+// 5. Start the server
+app.listen(3000, () => {
+  console.log('Server running on http://localhost:3000');
+});
+
+
+
+
+
+
+
+
+
+
+
 
 
 
