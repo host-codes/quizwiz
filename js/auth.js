@@ -52,8 +52,9 @@ if (signupForm) {
         alert('Signup successful! Please enter the OTP sent to your email.');
 
         // ✅ Show OTP form and hide signup form
-        signupForm.classList.add('hidden');
-        document.getElementById('otpForm').classList.remove('hidden');
+        
+    document.getElementById('otpSection').classList.remove('hidden');
+    signupForm.classList.add('hidden');
 
         // Optionally store email in localStorage or a variable for verifying OTP later
         localStorage.setItem('signupEmail', email);
