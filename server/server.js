@@ -4,6 +4,7 @@ const path = require('path');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const dns = require('dns');
+const fs = require('fs');
 const authRoutes = require('./routes/auth');
 const { verifyToken } = require('./middleware/auth');
 
@@ -24,51 +25,14 @@ app.use(cors({
   credentials: true
 }));
 
+// Request logging middleware
+app.use((req, res, next) => {
+  console.log(`${req.method} ${req.path}`);
+  next();
+});
+
 // Middleware
 app.use(express.json());
-
-// Database Connection with validation
-/*const connectWithRetry = () => {
-  const connectionString = process.env.MONGODB_URI || process.env.MONGOOB_URI;
-  
-  // Validate connection string format
-  if (!connectionString) {
-    console.error('MongoDB connection error: No connection string provided');
-    return setTimeout(connectWithRetry, 5000);
-  }
-
-  if (!connectionString.startsWith('mongodb://') && !connectionString.startsWith('mongodb+srv://')) {
-    console.error('MongoDB connection error: Invalid connection string format. Must start with mongodb:// or mongodb+srv://');
-    console.error('Current connection string:', connectionString);
-    return setTimeout(connectWithRetry, 5000);
-  }
-
-  console.log('Attempting MongoDB connection with:', connectionString);
-  
-  mongoose.connect(connectionString, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    serverSelectionTimeoutMS: 5000,
-    retryWrites: true,
-    w: 'majority'
-  })
-  .then(() => console.log('Connected to MongoDB'))
-  .catch(err => {
-    console.error('MongoDB connection error:', err.message);
-    console.log('Retrying connection in 5 seconds...');
-    setTimeout(connectWithRetry, 5000);
-  });
-};*/
-
-
-
-
-
-
-
-
-
-
 
 // Database Connection with enhanced error handling
 const connectWithRetry = async () => {
@@ -76,6 +40,12 @@ const connectWithRetry = async () => {
   
   if (!connectionString) {
     console.error('MongoDB URI not configured!');
+    process.exit(1);
+  }
+
+  if (!connectionString.startsWith('mongodb://') && 
+      !connectionString.startsWith('mongodb+srv://')) {
+    console.error('Invalid MongoDB connection string format');
     process.exit(1);
   }
 
@@ -96,38 +66,11 @@ const connectWithRetry = async () => {
   }
 };
 
-// Add these event listeners
+// MongoDB Connection Event Listeners
 mongoose.connection.on('connecting', () => console.log('Connecting to MongoDB...'));
-mongoose.connection.on('disconnected', () => console.log('MongoDB disconnected'));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Connection event handlers
-mongoose.connection.on('connected', () => {
-  console.log('Mongoose connected to DB cluster');
-});
-
-mongoose.connection.on('error', (err) => {
-  console.error('Mongoose connection error:', err);
-});
-
-mongoose.connection.on('disconnected', () => {
-  console.log('Mongoose disconnected');
-});
+mongoose.connection.on('connected', () => console.log('Mongoose connected to DB cluster'));
+mongoose.connection.on('error', (err) => console.error('Mongoose connection error:', err));
+mongoose.connection.on('disconnected', () => console.log('Mongoose disconnected'));
 
 // Initialize connection
 connectWithRetry();
@@ -145,19 +88,33 @@ app.get('/api/health', (req, res) => {
 });
 
 // Serve static files from public directory
-app.use(express.static(path.join(__dirname, '../public')));
+const publicPath = path.join(__dirname, '../public');
+app.use(express.static(publicPath));
 
-// Handle SPA routing
+// Handle SPA routing with existence check
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../public', 'index.html'));
+  const indexPath = path.join(publicPath, 'index.html');
+  if (fs.existsSync(indexPath)) {
+    res.sendFile(indexPath);
+  } else {
+    res.status(404).json({ 
+      error: 'Frontend not built',
+      suggestion: 'Run npm run build in client directory'
+    });
+  }
 });
 
 // Error handling middleware
 app.use((err, req, res, next) => {
-  console.error(err.stack);
+  console.error('Error:', {
+    message: err.message,
+    stack: process.env.NODE_ENV === 'production' ? undefined : err.stack,
+    path: req.path,
+    method: req.method
+  });
   res.status(500).json({ 
-    message: 'Internal Server Error',
-    error: process.env.NODE_ENV === 'development' ? err.message : undefined
+    error: 'Internal Server Error',
+    details: process.env.NODE_ENV === 'production' ? undefined : err.message
   });
 });
 
