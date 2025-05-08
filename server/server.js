@@ -27,10 +27,25 @@ app.use(cors({
 // Middleware
 app.use(express.json());
 
-// Database Connection with retry logic
+// Database Connection with validation
 const connectWithRetry = () => {
-  console.log('Attempting MongoDB connection...');
-  mongoose.connect(process.env.MONGODB_URI || process.env.MONGOOB_URI, {
+  const connectionString = process.env.MONGODB_URI || process.env.MONGOOB_URI;
+  
+  // Validate connection string format
+  if (!connectionString) {
+    console.error('MongoDB connection error: No connection string provided');
+    return setTimeout(connectWithRetry, 5000);
+  }
+
+  if (!connectionString.startsWith('mongodb://') && !connectionString.startsWith('mongodb+srv://')) {
+    console.error('MongoDB connection error: Invalid connection string format. Must start with mongodb:// or mongodb+srv://');
+    console.error('Current connection string:', connectionString);
+    return setTimeout(connectWithRetry, 5000);
+  }
+
+  console.log('Attempting MongoDB connection with:', connectionString);
+  
+  mongoose.connect(connectionString, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     serverSelectionTimeoutMS: 5000,
