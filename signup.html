@@ -42,7 +42,7 @@
                 </div>
                 <button type="submit" class="btn primary full-width">Sign Up</button>
             </form>
-            <div id="otpSection" class="hidden">
+           <!-- <div id="otpSection" class="hidden">
                 <p>We've sent an OTP to your email</p>
               
                     <form id="otpForm" class="hidden">
@@ -52,7 +52,21 @@
                     </div>
                     <button type="submit" class="btn primary full-width">Verify</button>
                 </form>
-            </div>
+            </div>-->
+
+<div id="otpSection" class="hidden">
+    <p>We've sent an OTP to your email</p>
+    <form id="otpForm">
+        <div class="form-group">
+            <label for="otp">Enter OTP</label>
+            <input type="text" id="otp" required>
+        </div>
+        <button type="submit" class="btn primary full-width">Verify</button>
+    </form>
+</div>
+
+
+            
             <p class="auth-footer">Already have an account? <a href="/signin.html">Sign In</a></p>
         </div>
     </div>
