@@ -1,5 +1,4 @@
-// Add at the top of server.js
-const dns = require('dns');
+
 dns.setServers(['8.8.8.8', '8.8.4.4']); // Use Google DNS
 
 require('dotenv').config();
