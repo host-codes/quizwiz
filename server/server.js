@@ -1,3 +1,7 @@
+// Add at the top of server.js
+const dns = require('dns');
+dns.setServers(['8.8.8.8', '8.8.4.4']); // Use Google DNS
+
 require('dotenv').config();
 const express = require('express');
 const path = require('path');
@@ -36,7 +40,8 @@ app.use(express.json());
 
 // Database Connection with enhanced error handling
 const connectWithRetry = async () => {
-  const connectionString = process.env.MONGODB_URI;
+  //const connectionString = process.env.MONGODB_URI;
+    const connectionString = process.env.MONGODB_URI.replace(/\s/g, ''); // Remove any whites
   
   if (!connectionString) {
     console.error('MongoDB URI not configured!');
@@ -49,7 +54,7 @@ const connectWithRetry = async () => {
     process.exit(1);
   }
 
-  try {
+    try {
     await mongoose.connect(connectionString, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
