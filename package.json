@@ -4,11 +4,12 @@
     "description": "Your application description",
     "main": "server/server.js",
     "scripts": {
-      "start": "node server/server.js",
-  "build": "cd client && npm install && npm run build",
+      "start": "node server.js",
+          "build": "echo 'Skipping client build - using pre-built public files'",
+
   "install-client": "cd client && npm install",
         
-        "dev": "nodemon server/server.js",
+        "dev": "nodemon server.js",
         "client": "cd public && live-server",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
