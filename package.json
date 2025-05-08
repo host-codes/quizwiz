@@ -5,7 +5,7 @@
     "main": "server/server.js",
     "scripts": {
       "start": "node server/server.js",
-          "build": "echo 'Skipping client build - using pre-built public files'",
+          "build": "echo 'Skipping client build'",
 
   "install-client": "cd client && npm install",
         
