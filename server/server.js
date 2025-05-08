@@ -1,5 +1,4 @@
 
-dns.setServers(['8.8.8.8', '8.8.4.4']); // Use Google DNS
 
 require('dotenv').config();
 const express = require('express');
@@ -11,6 +10,9 @@ const fs = require('fs');
 const authRoutes = require('./routes/auth');
 const { verifyToken } = require('./middleware/auth');
 
+// Use Google DNS as fallback
+dns.setServers(['8.8.8.8', '8.8.4.4']);
+
 // Add this debug logging right here ▼
 console.log('Environment Variables:', {
   MONGODB_URI: process.env.MONGODB_URI ? 'exists' : 'missing',
@@ -21,8 +23,7 @@ console.log('Environment Variables:', {
 
 const app = express();
 
-// Use Google DNS as fallback
-dns.setServers(['8.8.8.8', '8.8.4.4']);
+
 
 // Enhanced CORS Configuration
 app.use(cors({
