@@ -28,7 +28,7 @@ app.use(cors({
 app.use(express.json());
 
 // Database Connection with validation
-const connectWithRetry = () => {
+/*const connectWithRetry = () => {
   const connectionString = process.env.MONGODB_URI || process.env.MONGOOB_URI;
   
   // Validate connection string format
@@ -58,7 +58,63 @@ const connectWithRetry = () => {
     console.log('Retrying connection in 5 seconds...');
     setTimeout(connectWithRetry, 5000);
   });
+};*/
+
+
+
+
+
+
+
+
+
+
+
+// Database Connection with enhanced error handling
+const connectWithRetry = async () => {
+  const connectionString = process.env.MONGODB_URI;
+  
+  if (!connectionString) {
+    console.error('MongoDB URI not configured!');
+    process.exit(1);
+  }
+
+  try {
+    await mongoose.connect(connectionString, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      serverSelectionTimeoutMS: 10000,
+      socketTimeoutMS: 45000,
+      retryWrites: true,
+      w: 'majority'
+    });
+    console.log('MongoDB connected successfully');
+  } catch (err) {
+    console.error('MongoDB connection error:', err.message);
+    console.log('Retrying in 5 seconds...');
+    setTimeout(connectWithRetry, 5000);
+  }
 };
+
+// Add these event listeners
+mongoose.connection.on('connecting', () => console.log('Connecting to MongoDB...'));
+mongoose.connection.on('disconnected', () => console.log('MongoDB disconnected'));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Connection event handlers
 mongoose.connection.on('connected', () => {
