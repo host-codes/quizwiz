@@ -11,6 +11,14 @@ const fs = require('fs');
 const authRoutes = require('./routes/auth');
 const { verifyToken } = require('./middleware/auth');
 
+// Add this debug logging right here ▼
+console.log('Environment Variables:', {
+  MONGODB_URI: process.env.MONGODB_URI ? 'exists' : 'missing',
+  NODE_ENV: process.env.NODE_ENV || 'development (default)',
+  PORT: process.env.PORT || '3000 (default)'
+});
+
+
 const app = express();
 
 // Use Google DNS as fallback
