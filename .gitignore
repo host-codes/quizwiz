@@ -1,0 +1,21 @@
+# Dependency directories
+node_modules/
+
+# Environment variables
+.env
+
+# macOS system files
+.DS_Store
+
+# Log files
+*.log
+
+# Editor directories and files
+.idea
+.vscode
+*.swp
+*.swo
+
+# Build directories
+dist/
+build/
