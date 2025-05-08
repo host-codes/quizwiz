@@ -1,25 +1,25 @@
 {
-  "name": "quizwiz",
-  "version": "1.0.0",
-  "description": "Your application description",
-  "main": "server/server.js",
-  "scripts": {
-    "start": "node server/server.js",
-    "dev": "nodemon server/server.js",
-    "client": "cd public && live-server",  // For frontend development
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "cors": "^2.8.5",
-    "dotenv": "^16.0.3",
-    "express": "^4.18.2",
-    "jsonwebtoken": "^9.0.0",
-    "mongoose": "^7.0.3",
-    "nodemailer": "^6.9.1"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.22",
-    "live-server": "^1.2.2"  // For frontend development
-  }
+    "name": "quizwiz",
+    "version": "1.0.0",
+    "description": "Your application description",
+    "main": "server/server.js",
+    "scripts": {
+        "start": "node server/server.js",
+        "dev": "nodemon server/server.js",
+        "client": "cd public && live-server",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "cors": "^2.8.5",
+        "dotenv": "^16.0.3",
+        "express": "^4.18.2",
+        "jsonwebtoken": "^9.0.0",
+        "mongoose": "^7.0.3",
+        "nodemailer": "^6.9.1"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.22",
+        "live-server": "^1.2.2"
+    }
 }
