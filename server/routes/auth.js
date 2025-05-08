@@ -57,9 +57,14 @@ router.post('/verify-otp', async (req, res) => {
         }
         
         // Check OTP
-        if (user.otp !== parseInt(otp) {
+      /*  if (user.otp !== parseInt(otp) {
             return res.status(400).json({ message: 'Invalid OTP' });
-        }
+        }*/
+
+// After (fixed)
+if (user.otp !== parseInt(otp)) {
+  return res.status(400).json({ message: 'Invalid OTP' });
+}
         
         // Check OTP expiry
         if (user.otpExpiry < new Date()) {
