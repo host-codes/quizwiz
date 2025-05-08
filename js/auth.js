@@ -64,7 +64,7 @@ if (signupForm) {
     console.error('Error during signup:', error);
     alert('Server error. Please try again later.');
       }
-
+});
 }
 
 // OTP Verification
