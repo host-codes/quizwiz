@@ -37,42 +37,43 @@ if (signupForm) {
             return;
         }
         
-        try {
-            const response = await fetch(`${API_BASE_URL}/auth/signup`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ name, email, password })
-            });
-            
-            const data = await response.json();
-            
-            if (response.ok) {
-                // Show OTP section
-                document.getElementById('otpSection').classList.remove('hidden');
-                signupForm.classList.add('hidden');
-                
-                // Store email for verification
-                localStorage.setItem('tempEmail', email);
-            } else {
-                alert(data.message || 'Signup failed');
-            }
-        } catch (error) {
-            console.error('Error:', error);
-            alert('An error occurred during signup');
-        }
+      try {
+    const response = await fetch(`${API_BASE_URL}/auth/signup`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ name, email, password })
     });
+
+    const result = await response.json();
+
+    if (response.ok) {
+        alert('Signup successful! Please enter the OTP sent to your email.');
+
+        // ✅ Show OTP form and hide signup form
+        signupForm.classList.add('hidden');
+        document.getElementById('otpForm').classList.remove('hidden');
+
+        // Optionally store email in localStorage or a variable for verifying OTP later
+        localStorage.setItem('signupEmail', email);
+    } else {
+        alert(result.message || 'Signup failed. Try again.');
+    }
+} catch (error) {
+    console.error('Error during signup:', error);
+    alert('Server error. Please try again later.');
+      }
+
 }
 
 // OTP Verification
 if (otpForm) {
     otpForm.addEventListener('submit', async (e) => {
         e.preventDefault();
-        
         const otp = document.getElementById('otp').value;
-        const email = localStorage.getItem('tempEmail');
-        
+        const email = localStorage.getItem('signupEmail');
+
         try {
             const response = await fetch(`${API_BASE_URL}/auth/verify-otp`, {
                 method: 'POST',
@@ -81,22 +82,22 @@ if (otpForm) {
                 },
                 body: JSON.stringify({ email, otp })
             });
-            
-            const data = await response.json();
-            
+
+            const result = await response.json();
+
             if (response.ok) {
-                alert('Account created successfully! Please sign in.');
+                alert('Account verified successfully! You can now sign in.');
                 window.location.href = '/signin.html';
-                localStorage.removeItem('tempEmail');
             } else {
-                alert(data.message || 'OTP verification failed');
+                alert(result.message || 'Invalid OTP');
             }
         } catch (error) {
-            console.error('Error:', error);
-            alert('An error occurred during OTP verification');
+            console.error('Error verifying OTP:', error);
+            alert('Server error. Try again later.');
         }
     });
 }
+
 
 // Sign In Functionality
 if (signinForm) {
