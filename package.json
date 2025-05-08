@@ -9,7 +9,7 @@
 
   "install-client": "cd client && npm install",
         
-        "dev": "nodemon server/server.js"
+        "dev": "nodemon server/server.js",
         "client": "cd public && live-server",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
