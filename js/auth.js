@@ -136,6 +136,58 @@ if (signinForm) {
     });
 }
 
+
+
+
+
+
+
+
+const nodemailer = require('nodemailer');
+
+// SET UP EMAIL SENDER
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: 'your-email@gmail.com',
+    pass: 'abcdabcdefghijkmnop' // use your 16-character App Password here, NO SPACES
+  }
+});
+
+// SEND OTP FUNCTION
+const sendOtp = async (req, res) => {
+  const { email, otp } = req.body;
+
+  const mailOptions = {
+    from: 'your-email@gmail.com',
+    to: email,
+    subject: 'Your OTP for QuizWiz',
+    text: `Your OTP code is: ${otp}`
+  };
+
+  try {
+    await transporter.sendMail(mailOptions);
+    res.status(200).json({ message: 'OTP sent successfully!' });
+  } catch (error) {
+    console.error('Error sending OTP:', error);
+    res.status(500).json({ message: 'Failed to send OTP' });
+  }
+};
+
+module.exports = { sendOtp };
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Logout Functionality
 if (logoutLink) {
     logoutLink.addEventListener('click', (e) => {
