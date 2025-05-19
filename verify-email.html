@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Email | QuizWiz</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #4361ee;
+            --success-color: #4BB543;
+            --error-color: #ef233c;
+            --text-color: #2b2d42;
+            --light-gray: #f8f9fa;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light-gray);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            color: var(--text-color);
+        }
+        
+        .verify-container {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+        }
+        
+        .logo {
+            margin-bottom: 25px;
+            font-size: 28px;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .icon-container {
+            margin: 20px 0;
+            position: relative;
+            height: 80px;
+        }
+        
+        .check-icon {
+            font-size: 60px;
+            color: var(--success-color);
+            opacity: 0;
+            transform: scale(0.5);
+            transition: all 0.5s ease;
+        }
+        
+        .check-icon.animated {
+            opacity: 1;
+            transform: scale(1);
+            animation: bounce 0.5s ease;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+        
+        h2 {
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+        
+        .message {
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 8px;
+            display: none;
+        }
+        
+        .success-message {
+            background-color: rgba(75, 181, 67, 0.1);
+            color: var(--success-color);
+            border: 1px solid rgba(75, 181, 67, 0.3);
+        }
+        
+        .error-message {
+            background-color: rgba(239, 35, 60, 0.1);
+            color: var(--error-color);
+            border: 1px solid rgba(239, 35, 60, 0.3);
+        }
+        
+        .loading {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid rgba(67, 97, 238, 0.2);
+            border-top: 4px solid var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .login-button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .login-button:hover {
+            background-color: #3a56d4;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="verify-container">
+        <div class="logo">QuizWiz</div>
+        
+        <div class="icon-container">
+            <i class="fas fa-check-circle check-icon" id="check-icon"></i>
+        </div>
+        
+        <h2>Email Verification</h2>
+        
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+            <p>Verifying your email...</p>
+        </div>
+        
+        <div id="success-message" class="message success-message" style="display: none;">
+            <p>Email verified successfully! You can now login to your account.</p>
+        </div>
+        
+        <div id="error-message" class="message error-message" style="display: none;">
+            <p id="error-text">Try verifying your email again. Your request to verify your email has expired or the link has already been used.</p>
+        </div>
+        
+        <a href="/login" class="login-button" id="login-button" style="display: none;">
+            <i class="fas fa-sign-in-alt"></i> Go to Login
+        </a>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
+    
+    <script>
+        // Initialize Firebase
+        const firebaseConfig = {
+            apiKey: "AIzaSyDaaytl89rdhGmBroRPpYEt55zmDjFefQ0",
+            authDomain: "quizwiz.a-web.online",
+            projectId: "quizwiz-91c47",
+            storageBucket: "quizwiz-91c47.appspot.com",
+            messagingSenderId: "318422165023",
+            appId: "1:318422165023:web:2966847b71e8777c07172a",
+            measurementId: "G-733PML4EFH"
+        };
+        firebase.initializeApp(firebaseConfig);
+
+        // Get parameters from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const oobCode = urlParams.get('oobCode');
+        const mode = urlParams.get('mode');
+        
+        // Elements
+        const loadingElement = document.getElementById('loading');
+        const successElement = document.getElementById('success-message');
+        const errorElement = document.getElementById('error-message');
+        const checkIcon = document.getElementById('check-icon');
+        const loginButton = document.getElementById('login-button');
+        const errorText = document.getElementById('error-text');
+        
+        // Redirect if no valid verification code
+        if (!oobCode || mode !== 'verifyEmail') {
+            window.location.href = '/login';
+        } else {
+            // Apply email verification
+            firebase.auth().applyActionCode(oobCode)
+                .then(() => {
+                    // Success - show animation and message
+                    loadingElement.style.display = 'none';
+                    checkIcon.classList.add('animated');
+                    successElement.style.display = 'block';
+                    loginButton.style.display = 'inline-block';
+                    
+                    // Redirect after 5 seconds
+                    setTimeout(() => {
+                        window.location.href = '/login';
+                    }, 5000);
+                })
+                .catch((error) => {
+                    // Handle different error cases
+                    loadingElement.style.display = 'none';
+                    
+                    if (error.code === 'auth/invalid-action-code') {
+                        errorText.textContent = "Try verifying your email again. Your request to verify your email has expired or the link has already been used.";
+                    } else {
+                        errorText.textContent = "Error verifying email: " + error.message;
+                    }
+                    
+                    errorElement.style.display = 'block';
+                    loginButton.style.display = 'inline-block';
+                });
+        }
+    </script>
+</body>
+</html>
