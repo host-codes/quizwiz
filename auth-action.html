@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Account Action</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Your existing CSS styles */
+        body { 
+            font-family: 'Segoe UI', sans-serif;
+            text-align: center;
+            padding: 2rem;
+        }
+        .success { color: #4BB543; }
+        .error { color: #ef233c; }
+        .icon { font-size: 3rem; margin: 1rem; }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <div id="loading">
+        <div class="spinner"></div>
+        <p>Processing your request...</p>
+    </div>
+
+    <!-- Password Reset Section -->
+    <div id="reset-password" class="hidden">
+        <i class="fas fa-key icon"></i>
+        <h2>Reset Password</h2>
+        <form id="reset-form">
+            <input type="password" id="new-password" placeholder="New password" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <!-- Email Verification Section -->
+    <div id="verify-email" class="hidden">
+        <i class="fas fa-envelope icon"></i>
+        <h2 id="verify-message"></h2>
+    </div>
+
+    <!-- Error Section -->
+    <div id="error" class="hidden">
+        <i class="fas fa-exclamation-triangle icon error"></i>
+        <p id="error-text"></p>
+        <a href="/login">Go to Login</a>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
+    <script>
+        // Firebase config
+    const _0x52115d=_0x2240;(function(_0x260f1e,_0x361450){const _0x154c38=_0x2240,_0x47cb7f=_0x260f1e();while(!![]){try{const _0x438437=-parseInt(_0x154c38(0x15f))/0x1+parseInt(_0x154c38(0x165))/0x2*(parseInt(_0x154c38(0x162))/0x3)+parseInt(_0x154c38(0x161))/0x4*(parseInt(_0x154c38(0x160))/0x5)+parseInt(_0x154c38(0x167))/0x6+-parseInt(_0x154c38(0x164))/0x7+-parseInt(_0x154c38(0x16b))/0x8*(-parseInt(_0x154c38(0x169))/0x9)+parseInt(_0x154c38(0x163))/0xa*(parseInt(_0x154c38(0x166))/0xb);if(_0x438437===_0x361450)break;else _0x47cb7f['push'](_0x47cb7f['shift']());}catch(_0x22d0ba){_0x47cb7f['push'](_0x47cb7f['shift']());}}}(_0xcfd7,0xf119d));function _0x2240(_0x39ecfd,_0x108565){const _0xcfd740=_0xcfd7();return _0x2240=function(_0x2240b6,_0x4efc5a){_0x2240b6=_0x2240b6-0x15e;let _0x16c7a6=_0xcfd740[_0x2240b6];return _0x16c7a6;},_0x2240(_0x39ecfd,_0x108565);}const firebaseConfig={'apiKey':_0x52115d(0x16a),'authDomain':'quizwiz-91c47.firebaseapp.com','projectId':_0x52115d(0x15e),'storageBucket':'quizwiz-91c47.appspot.com','messagingSenderId':'318422165023','appId':_0x52115d(0x168),'measurementId':'G-733PML4EFH'};function _0xcfd7(){const _0x760bdf=['AIzaSyDaaytl89rdhGmBroRPpYEt55zmDjFefQ0','8umHIzq','quizwiz-91c47','1498007wiEClt','15rrGWxX','1181788dAwVdn','3DtccxO','516680kJtsKe','3756263kLocJH','1255812RxiqdO','44bIBJDa','6124248ARoVAv','1:318422165023:web:2966847b71e8777c07172a','2524842zfzVpH'];_0xcfd7=function(){return _0x760bdf;};return _0xcfd7();}
+
+        firebase.initializeApp(firebaseConfig);
+
+        // Handle all auth actions
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const mode = params.get('mode');
+            const oobCode = params.get('oobCode');
+            const apiKey = params.get('apiKey');
+
+            if (!oobCode || !mode) {
+                showError("Invalid request. Missing parameters.");
+                return;
+            }
+
+            if (mode === 'resetPassword') {
+                handlePasswordReset(oobCode);
+            } else if (mode === 'verifyEmail') {
+                handleEmailVerification(oobCode);
+            } else {
+                showError("Unsupported action type.");
+            }
+        });
+
+        function handlePasswordReset(oobCode) {
+            document.getElementById('loading').classList.add('hidden');
+            document.getElementById('reset-password').classList.remove('hidden');
+
+            document.getElementById('reset-form').addEventListener('submit', (e) => {
+                e.preventDefault();
+                const newPassword = document.getElementById('new-password').value;
+                
+                firebase.auth().confirmPasswordReset(oobCode, newPassword)
+                    .then(() => {
+                        alert("Password reset successfully!");
+                        window.location.href = "/login";
+                    })
+                    .catch(showError);
+            });
+        }
+
+        function handleEmailVerification(oobCode) {
+            firebase.auth().applyActionCode(oobCode)
+                .then(() => {
+                    document.getElementById('loading').classList.add('hidden');
+                    document.getElementById('verify-email').classList.remove('hidden');
+                    document.getElementById('verify-message').textContent = 
+                        "Email verified successfully!";
+                    setTimeout(() => window.location.href = "/login", 3000);
+                })
+                .catch((error) => {
+                    showError(error.code === 'auth/invalid-action-code' 
+                        ? "This verification link has expired or was already used."
+                        : error.message);
+                });
+        }
+
+        function showError(message) {
+            document.getElementById('loading').classList.add('hidden');
+            document.getElementById('error').classList.remove('hidden');
+            document.getElementById('error-text').textContent = message;
+        }
+    </script>
+</body>
+</html>
