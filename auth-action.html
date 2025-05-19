@@ -225,7 +225,7 @@
 
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
-    <script>
+    <script>		
 const _0x52115d=_0x2240;(function(_0x260f1e,_0x361450){const _0x154c38=_0x2240,_0x47cb7f=_0x260f1e();while(!![]){try{const _0x438437=-parseInt(_0x154c38(0x15f))/0x1+parseInt(_0x154c38(0x165))/0x2*(parseInt(_0x154c38(0x162))/0x3)+parseInt(_0x154c38(0x161))/0x4*(parseInt(_0x154c38(0x160))/0x5)+parseInt(_0x154c38(0x167))/0x6+-parseInt(_0x154c38(0x164))/0x7+-parseInt(_0x154c38(0x16b))/0x8*(-parseInt(_0x154c38(0x169))/0x9)+parseInt(_0x154c38(0x163))/0xa*(parseInt(_0x154c38(0x166))/0xb);if(_0x438437===_0x361450)break;else _0x47cb7f['push'](_0x47cb7f['shift']());}catch(_0x22d0ba){_0x47cb7f['push'](_0x47cb7f['shift']());}}}(_0xcfd7,0xf119d));function _0x2240(_0x39ecfd,_0x108565){const _0xcfd740=_0xcfd7();return _0x2240=function(_0x2240b6,_0x4efc5a){_0x2240b6=_0x2240b6-0x15e;let _0x16c7a6=_0xcfd740[_0x2240b6];return _0x16c7a6;},_0x2240(_0x39ecfd,_0x108565);}const firebaseConfig={'apiKey':_0x52115d(0x16a),'authDomain':'quizwiz-91c47.firebaseapp.com','projectId':_0x52115d(0x15e),'storageBucket':'quizwiz-91c47.appspot.com','messagingSenderId':'318422165023','appId':_0x52115d(0x168),'measurementId':'G-733PML4EFH'};function _0xcfd7(){const _0x760bdf=['AIzaSyDaaytl89rdhGmBroRPpYEt55zmDjFefQ0','8umHIzq','quizwiz-91c47','1498007wiEClt','15rrGWxX','1181788dAwVdn','3DtccxO','516680kJtsKe','3756263kLocJH','1255812RxiqdO','44bIBJDa','6124248ARoVAv','1:318422165023:web:2966847b71e8777c07172a','2524842zfzVpH'];_0xcfd7=function(){return _0x760bdf;};return _0xcfd7();}
 		
         firebase.initializeApp(firebaseConfig);
@@ -240,29 +240,43 @@ const _0x52115d=_0x2240;(function(_0x260f1e,_0x361450){const _0x154c38=_0x2240,_
         const errorMsg = document.getElementById('error-message');
         const errorText = document.getElementById('error-text');
 
-        // Handle page load
+       // Handle page load
         document.addEventListener('DOMContentLoaded', () => {
             const params = new URLSearchParams(window.location.search);
             const mode = params.get('mode');
             const oobCode = params.get('oobCode');
 
-            // If no action parameters, redirect to index
             if (!mode || !oobCode) {
                 window.location.href = '/';
                 return;
             }
 
-            // Show appropriate content based on mode
             if (mode === 'resetPassword') {
-                showPasswordReset(oobCode);
+                verifyResetCode(oobCode); // First verify the code
             } else if (mode === 'verifyEmail') {
                 showEmailVerification(oobCode);
-            } else {
-                showError("Invalid action type");
             }
         });
-
-        function showPasswordReset(oobCode) {
+		
+		
+		    // New function to verify reset code first
+        function verifyResetCode(oobCode) {
+            firebase.auth().verifyPasswordResetCode(oobCode)
+                .then((email) => {
+                    // Only show form if code is valid
+                    showPasswordReset(oobCode, email);
+                })
+                .catch((error) => {
+                    if (error.code === 'auth/invalid-action-code') {
+                        showError("Try resetting your password again. Your request has expired or the link was already used.", true);
+                    } else {
+                        showError(error.message, true);
+                    }
+                });
+        }
+		
+		
+    function showPasswordReset(oobCode, email) {
             mainIcon.className = 'fas fa-key icon';
             mainIcon.style.display = 'block';
             spinner.style.display = 'none';
@@ -288,6 +302,7 @@ const _0x52115d=_0x2240;(function(_0x260f1e,_0x361450){const _0x154c38=_0x2240,_
                         <i class="fas fa-key"></i> Reset Password
                     </button>
                 </form>
+                <div id="form-error" class="message error-msg" style="display: none; margin-top: 15px;"></div>
             `;
 
             // Setup password toggle
@@ -305,15 +320,21 @@ const _0x52115d=_0x2240;(function(_0x260f1e,_0x361450){const _0x154c38=_0x2240,_
                 const newPassword = document.getElementById('new-password').value;
                 const confirmPassword = document.getElementById('confirm-password').value;
                 const btn = document.getElementById('reset-btn');
+                const formError = document.getElementById('form-error');
+                
+                // Hide previous errors
+                formError.style.display = 'none';
                 
                 // Validation
                 if (newPassword !== confirmPassword) {
-                    showError("Passwords don't match");
+                    formError.textContent = "Passwords don't match";
+                    formError.style.display = 'block';
                     return;
                 }
                 
                 if (newPassword.length < 6) {
-                    showError("Password must be at least 6 characters");
+                    formError.textContent = "Password must be at least 6 characters";
+                    formError.style.display = 'block';
                     return;
                 }
                 
@@ -325,6 +346,7 @@ const _0x52115d=_0x2240;(function(_0x260f1e,_0x361450){const _0x154c38=_0x2240,_
                     await firebase.auth().confirmPasswordReset(oobCode, newPassword);
                     showSuccess("Password changed successfully!", true);
                 } catch (error) {
+                    formError.style.display = 'none'; // Hide form error if any
                     if (error.code === 'auth/invalid-action-code') {
                         showError("Try resetting your password again. Your request has expired or the link was already used.", true);
                     } else {
