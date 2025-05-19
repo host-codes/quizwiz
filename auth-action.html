@@ -1,116 +1,407 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Account Action</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Action | QuizWiz</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Your existing CSS styles */
-        body { 
-            font-family: 'Segoe UI', sans-serif;
-            text-align: center;
-            padding: 2rem;
+        :root {
+            --primary: #4361ee;
+            --success: #4BB543;
+            --error: #ef233c;
+            --text: #2b2d42;
+            --light-gray: #f8f9fa;
+            --border: #dee2e6;
         }
-        .success { color: #4BB543; }
-        .error { color: #ef233c; }
-        .icon { font-size: 3rem; margin: 1rem; }
-        .hidden { display: none; }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light-gray);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            color: var(--text);
+        }
+        
+        .container {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            width: 100%;
+            max-width: 480px;
+            text-align: center;
+            overflow: hidden;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .icon-container {
+            margin: 25px 0;
+            height: 100px;
+            position: relative;
+        }
+        
+        .icon {
+            font-size: 60px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .check-icon {
+            color: var(--success);
+            opacity: 0;
+        }
+        
+        .spinner {
+            width: 60px;
+            height: 60px;
+            border: 5px solid rgba(67, 97, 238, 0.2);
+            border-top: 5px solid var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .input-wrapper {
+            position: relative;
+        }
+        
+        input {
+            width: 100%;
+            padding: 14px 45px 14px 16px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+        
+        input:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+        }
+        
+        .toggle-pw {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: var(--text);
+            opacity: 0.6;
+        }
+        
+        .toggle-pw:hover {
+            opacity: 1;
+        }
+        
+        button {
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 14px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s;
+            margin-top: 10px;
+        }
+        
+        button:hover {
+            background: #3a56d4;
+            transform: translateY(-2px);
+        }
+        
+        button:active {
+            transform: translateY(0);
+        }
+        
+        .message {
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            display: none;
+        }
+        
+        .success-msg {
+            background: rgba(75, 181, 67, 0.1);
+            color: var(--success);
+            border: 1px solid rgba(75, 181, 67, 0.3);
+        }
+        
+        .error-msg {
+            background: rgba(239, 35, 60, 0.1);
+            color: var(--error);
+            border: 1px solid rgba(239, 35, 60, 0.3);
+        }
+        
+        .login-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-block;
+            margin-top: 15px;
+        }
+        
+        /* Animations */
+        @keyframes checkmark {
+            0% { transform: translateX(-50%) scale(0); opacity: 0; }
+            50% { transform: translateX(-50%) scale(1.2); opacity: 1; }
+            100% { transform: translateX(-50%) scale(1); opacity: 1; }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.5s ease forwards;
+        }
     </style>
 </head>
 <body>
-    <div id="loading">
-        <div class="spinner"></div>
-        <p>Processing your request...</p>
-    </div>
-
-    <!-- Password Reset Section -->
-    <div id="reset-password" class="hidden">
-        <i class="fas fa-key icon"></i>
-        <h2>Reset Password</h2>
-        <form id="reset-form">
-            <input type="password" id="new-password" placeholder="New password" required>
-            <button type="submit">Submit</button>
-        </form>
-    </div>
-
-    <!-- Email Verification Section -->
-    <div id="verify-email" class="hidden">
-        <i class="fas fa-envelope icon"></i>
-        <h2 id="verify-message"></h2>
-    </div>
-
-    <!-- Error Section -->
-    <div id="error" class="hidden">
-        <i class="fas fa-exclamation-triangle icon error"></i>
-        <p id="error-text"></p>
-        <a href="/login">Go to Login</a>
+    <div class="container">
+        <div class="logo">QuizWiz</div>
+        
+        <div class="icon-container">
+            <div id="spinner" class="spinner"></div>
+            <i id="check-icon" class="fas fa-check-circle icon check-icon"></i>
+            <i id="main-icon" class="fas fa-lock icon" style="display: none;"></i>
+        </div>
+        
+        <div id="content">
+            <!-- Content will be dynamically loaded -->
+        </div>
+        
+        <div id="success-message" class="message success-msg" style="display: none;">
+            <p id="success-text"></p>
+        </div>
+        
+        <div id="error-message" class="message error-msg" style="display: none;">
+            <p id="error-text"></p>
+            <a href="/" class="login-link">Go to Homepage</a>
+        </div>
     </div>
 
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
     <script>
-        // Firebase config
-    const _0x52115d=_0x2240;(function(_0x260f1e,_0x361450){const _0x154c38=_0x2240,_0x47cb7f=_0x260f1e();while(!![]){try{const _0x438437=-parseInt(_0x154c38(0x15f))/0x1+parseInt(_0x154c38(0x165))/0x2*(parseInt(_0x154c38(0x162))/0x3)+parseInt(_0x154c38(0x161))/0x4*(parseInt(_0x154c38(0x160))/0x5)+parseInt(_0x154c38(0x167))/0x6+-parseInt(_0x154c38(0x164))/0x7+-parseInt(_0x154c38(0x16b))/0x8*(-parseInt(_0x154c38(0x169))/0x9)+parseInt(_0x154c38(0x163))/0xa*(parseInt(_0x154c38(0x166))/0xb);if(_0x438437===_0x361450)break;else _0x47cb7f['push'](_0x47cb7f['shift']());}catch(_0x22d0ba){_0x47cb7f['push'](_0x47cb7f['shift']());}}}(_0xcfd7,0xf119d));function _0x2240(_0x39ecfd,_0x108565){const _0xcfd740=_0xcfd7();return _0x2240=function(_0x2240b6,_0x4efc5a){_0x2240b6=_0x2240b6-0x15e;let _0x16c7a6=_0xcfd740[_0x2240b6];return _0x16c7a6;},_0x2240(_0x39ecfd,_0x108565);}const firebaseConfig={'apiKey':_0x52115d(0x16a),'authDomain':'quizwiz-91c47.firebaseapp.com','projectId':_0x52115d(0x15e),'storageBucket':'quizwiz-91c47.appspot.com','messagingSenderId':'318422165023','appId':_0x52115d(0x168),'measurementId':'G-733PML4EFH'};function _0xcfd7(){const _0x760bdf=['AIzaSyDaaytl89rdhGmBroRPpYEt55zmDjFefQ0','8umHIzq','quizwiz-91c47','1498007wiEClt','15rrGWxX','1181788dAwVdn','3DtccxO','516680kJtsKe','3756263kLocJH','1255812RxiqdO','44bIBJDa','6124248ARoVAv','1:318422165023:web:2966847b71e8777c07172a','2524842zfzVpH'];_0xcfd7=function(){return _0x760bdf;};return _0xcfd7();}
-
+const _0x52115d=_0x2240;(function(_0x260f1e,_0x361450){const _0x154c38=_0x2240,_0x47cb7f=_0x260f1e();while(!![]){try{const _0x438437=-parseInt(_0x154c38(0x15f))/0x1+parseInt(_0x154c38(0x165))/0x2*(parseInt(_0x154c38(0x162))/0x3)+parseInt(_0x154c38(0x161))/0x4*(parseInt(_0x154c38(0x160))/0x5)+parseInt(_0x154c38(0x167))/0x6+-parseInt(_0x154c38(0x164))/0x7+-parseInt(_0x154c38(0x16b))/0x8*(-parseInt(_0x154c38(0x169))/0x9)+parseInt(_0x154c38(0x163))/0xa*(parseInt(_0x154c38(0x166))/0xb);if(_0x438437===_0x361450)break;else _0x47cb7f['push'](_0x47cb7f['shift']());}catch(_0x22d0ba){_0x47cb7f['push'](_0x47cb7f['shift']());}}}(_0xcfd7,0xf119d));function _0x2240(_0x39ecfd,_0x108565){const _0xcfd740=_0xcfd7();return _0x2240=function(_0x2240b6,_0x4efc5a){_0x2240b6=_0x2240b6-0x15e;let _0x16c7a6=_0xcfd740[_0x2240b6];return _0x16c7a6;},_0x2240(_0x39ecfd,_0x108565);}const firebaseConfig={'apiKey':_0x52115d(0x16a),'authDomain':'quizwiz-91c47.firebaseapp.com','projectId':_0x52115d(0x15e),'storageBucket':'quizwiz-91c47.appspot.com','messagingSenderId':'318422165023','appId':_0x52115d(0x168),'measurementId':'G-733PML4EFH'};function _0xcfd7(){const _0x760bdf=['AIzaSyDaaytl89rdhGmBroRPpYEt55zmDjFefQ0','8umHIzq','quizwiz-91c47','1498007wiEClt','15rrGWxX','1181788dAwVdn','3DtccxO','516680kJtsKe','3756263kLocJH','1255812RxiqdO','44bIBJDa','6124248ARoVAv','1:318422165023:web:2966847b71e8777c07172a','2524842zfzVpH'];_0xcfd7=function(){return _0x760bdf;};return _0xcfd7();}
+		
         firebase.initializeApp(firebaseConfig);
 
-        // Handle all auth actions
+        // DOM elements
+        const contentDiv = document.getElementById('content');
+        const spinner = document.getElementById('spinner');
+        const checkIcon = document.getElementById('check-icon');
+        const mainIcon = document.getElementById('main-icon');
+        const successMsg = document.getElementById('success-message');
+        const successText = document.getElementById('success-text');
+        const errorMsg = document.getElementById('error-message');
+        const errorText = document.getElementById('error-text');
+
+        // Handle page load
         document.addEventListener('DOMContentLoaded', () => {
             const params = new URLSearchParams(window.location.search);
             const mode = params.get('mode');
             const oobCode = params.get('oobCode');
-            const apiKey = params.get('apiKey');
 
-            if (!oobCode || !mode) {
-                showError("Invalid request. Missing parameters.");
+            // If no action parameters, redirect to index
+            if (!mode || !oobCode) {
+                window.location.href = '/';
                 return;
             }
 
+            // Show appropriate content based on mode
             if (mode === 'resetPassword') {
-                handlePasswordReset(oobCode);
+                showPasswordReset(oobCode);
             } else if (mode === 'verifyEmail') {
-                handleEmailVerification(oobCode);
+                showEmailVerification(oobCode);
             } else {
-                showError("Unsupported action type.");
+                showError("Invalid action type");
             }
         });
 
-        function handlePasswordReset(oobCode) {
-            document.getElementById('loading').classList.add('hidden');
-            document.getElementById('reset-password').classList.remove('hidden');
+        function showPasswordReset(oobCode) {
+            mainIcon.className = 'fas fa-key icon';
+            mainIcon.style.display = 'block';
+            spinner.style.display = 'none';
 
-            document.getElementById('reset-form').addEventListener('submit', (e) => {
+            contentDiv.innerHTML = `
+                <h2>Reset Your Password</h2>
+                <form id="reset-form">
+                    <div class="form-group">
+                        <label for="new-password">New Password</label>
+                        <div class="input-wrapper">
+                            <input type="password" id="new-password" placeholder="Enter new password" required minlength="6">
+                            <i class="fas fa-eye toggle-pw" id="toggle-pw-1"></i>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password</label>
+                        <div class="input-wrapper">
+                            <input type="password" id="confirm-password" placeholder="Confirm new password" required minlength="6">
+                            <i class="fas fa-eye toggle-pw" id="toggle-pw-2"></i>
+                        </div>
+                    </div>
+                    <button type="submit" id="reset-btn">
+                        <i class="fas fa-key"></i> Reset Password
+                    </button>
+                </form>
+            `;
+
+            // Setup password toggle
+            document.getElementById('toggle-pw-1').addEventListener('click', function() {
+                togglePassword('new-password', this);
+            });
+            document.getElementById('toggle-pw-2').addEventListener('click', function() {
+                togglePassword('confirm-password', this);
+            });
+
+            // Handle form submission
+            document.getElementById('reset-form').addEventListener('submit', async (e) => {
                 e.preventDefault();
-                const newPassword = document.getElementById('new-password').value;
                 
-                firebase.auth().confirmPasswordReset(oobCode, newPassword)
-                    .then(() => {
-                        alert("Password reset successfully!");
-                        window.location.href = "/login";
-                    })
-                    .catch(showError);
+                const newPassword = document.getElementById('new-password').value;
+                const confirmPassword = document.getElementById('confirm-password').value;
+                const btn = document.getElementById('reset-btn');
+                
+                // Validation
+                if (newPassword !== confirmPassword) {
+                    showError("Passwords don't match");
+                    return;
+                }
+                
+                if (newPassword.length < 6) {
+                    showError("Password must be at least 6 characters");
+                    return;
+                }
+                
+                // Disable button during processing
+                btn.disabled = true;
+                btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+                
+                try {
+                    await firebase.auth().confirmPasswordReset(oobCode, newPassword);
+                    showSuccess("Password changed successfully!", true);
+                } catch (error) {
+                    if (error.code === 'auth/invalid-action-code') {
+                        showError("Try resetting your password again. Your request has expired or the link was already used.", true);
+                    } else {
+                        showError(error.message);
+                    }
+                    btn.disabled = false;
+                    btn.innerHTML = '<i class="fas fa-key"></i> Reset Password';
+                }
             });
         }
 
-        function handleEmailVerification(oobCode) {
+        function showEmailVerification(oobCode) {
+            mainIcon.className = 'fas fa-envelope icon';
+            mainIcon.style.display = 'block';
+            spinner.style.display = 'none';
+
+            contentDiv.innerHTML = `
+                <h2>Email Verification</h2>
+                <p>Verifying your email address...</p>
+            `;
+
             firebase.auth().applyActionCode(oobCode)
                 .then(() => {
-                    document.getElementById('loading').classList.add('hidden');
-                    document.getElementById('verify-email').classList.remove('hidden');
-                    document.getElementById('verify-message').textContent = 
-                        "Email verified successfully!";
-                    setTimeout(() => window.location.href = "/login", 3000);
+                    showSuccess("Email verified successfully!", true);
                 })
-                .catch((error) => {
-                    showError(error.code === 'auth/invalid-action-code' 
-                        ? "This verification link has expired or was already used."
-                        : error.message);
+                .catch(error => {
+                    if (error.code === 'auth/invalid-action-code') {
+                        showError("This verification link has expired or was already used.", true);
+                    } else {
+                        showError(error.message, true);
+                    }
                 });
         }
 
-        function showError(message) {
-            document.getElementById('loading').classList.add('hidden');
-            document.getElementById('error').classList.remove('hidden');
-            document.getElementById('error-text').textContent = message;
+        function togglePassword(inputId, icon) {
+            const input = document.getElementById(inputId);
+            if (input.type === 'password') {
+                input.type = 'text';
+                icon.classList.replace('fa-eye', 'fa-eye-slash');
+            } else {
+                input.type = 'password';
+                icon.classList.replace('fa-eye-slash', 'fa-eye');
+            }
+        }
+
+        function showSuccess(message, autoRedirect = false) {
+            contentDiv.style.display = 'none';
+            mainIcon.style.display = 'none';
+            
+            // Show checkmark animation
+            checkIcon.style.display = 'block';
+            checkIcon.style.animation = 'checkmark 0.6s ease forwards';
+            
+            // Show success message
+            successText.textContent = message;
+            successMsg.style.display = 'block';
+            
+            if (autoRedirect) {
+                setTimeout(() => {
+                    window.location.href = '/';
+                }, 9000);
+            }
+        }
+
+        function showError(message, autoRedirect = false) {
+            spinner.style.display = 'none';
+            mainIcon.style.display = 'none';
+            contentDiv.style.display = 'none';
+            
+            errorText.textContent = message;
+            errorMsg.style.display = 'block';
+            
+            if (autoRedirect) {
+                setTimeout(() => {
+                    window.location.href = '/';
+                }, 9000);
+            }
         }
     </script>
 </body>
