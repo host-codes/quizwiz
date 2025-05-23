@@ -1,0 +1,833 @@
+{
+    "title": "Reasoning (Day-1)",
+    "description": "Practice reasoning questions for competitive exams",
+    "duration": 1800,
+    "multilingual": true,
+    "questions": [
+        {
+            "english": {
+                "text": "In the following questions, some statements are given and followed by some conclusions. You have to decide which of the given conclusions logically follows from the given statements disregarding the commonly known facts.",
+                "question": "<b>Statements</b>\n Only a few purses are bag\nAll boxes are purse\nAt least some bags are Kit\nNo Kit is Pack\n <b>Conclusions:</b> \nI). Some boxes are Bag\nII). All bags can never be Pac",
+                "options": ["Only Conclusion I follow", "Either Conclusion I or II follows", "Only Conclusion II follows", "Both Conclusions I and II follow", "Neither Conclusion I nor II follows"],
+                "correctAnswer": 2,
+                "explanation": "By comparing the first and third statements, we can deduce that 'ym' stands for 'Aspen'."
+            },
+            "hindi": {
+                "text": "निम्नलिखित कथनों का अध्ययन करें और फिर तय करें कि दिए गए निष्कर्षों में से कौन सा निष्कर्ष सामान्य रूप से ज्ञात तथ्यों की परवाह किए बिना दिए गए कथनों का तार्किक रूप से अनुसरण करता है।",
+                "question": "<b>कथन:</b>\nकेवल कुछ ही पर्स(purses) बैग(bag) हैं\nसभी बॉक्स(boxes) पर्स(purses) हैं\nकम से कम कुछ बैग(bag) किट(Kit) हैं\nकोई किट(Kit) पैक(Pack) नहीं है \n<b>निष्कर्ष:</b>\nI). कुछ बॉक्स(boxes) बैग(bag) हैं\nII). सभी बैग(bag) कभी भी पैक(Pack) नहीं हो सकते हैं",
+                "options": ["केवल निष्कर्ष I अनुसरण करता है", "या तो निष्कर्ष I या II अनुसरण करता है", "केवल निष्कर्ष II अनुसरण करता है", "निष्कर्ष I और II दोनों अनुसरण करते हैं", "न तो निष्कर्ष I और न ही II अनुसरण करता है"],
+                "correctAnswer": 2,
+                "explanation": "पहले और तीसरे कथन की तुलना करके, हम निष्कर्ष निकाल सकते हैं कि 'ym' 'एस्पेन' के लिए है।"
+            }
+        },
+        {
+            "english": {
+                "text": "In the following questions, some statements are given and followed by some conclusions. You have to decide which of the given conclusions logically follows from the given statements disregarding the commonly known facts.",
+                "question": "<b>Statements</b>\n Only a few NRIs are NRO\nAll NROs are NRE\nSome NREs are PIO\n <b>Conclusions:</b> \nI). Some NREs are not NRI\nII). Some NROs are PIO",
+                "options": ["Only Conclusion I follow", "Either Conclusion I or II follows", "Only Conclusion II follows", "Both Conclusions I and II follow", "Neither Conclusion I nor II follows"],
+                "correctAnswer": 4,
+                "explanation": "Each letter is represented by its position in the English alphabet (A=1, B=2, etc.)."
+            },
+            "hindi": {
+                "text": "निम्नलिखित कथनों का अध्ययन करें और फिर तय करें कि दिए गए निष्कर्षों में से कौन सा निष्कर्ष सामान्य रूप से ज्ञात तथ्यों की परवाह किए बिना दिए गए कथनों का तार्किक रूप से अनुसरण करता है।",
+                "question": "<b>कथन:</b>\nकेवल कुछ ही एनआरआई(NRIs) एनआरओ(NRO) हैं\nसभी एनआरओ(NRO) एनआरई(NRE) हैं\nकुछ एनआरई(NRE) पीआईओ(PIO) हैं\n<b>निष्कर्ष:</b>\nI). कुछ एनआरई(NRE) एनआरआई(NRIs) नहीं हैं\nII). कुछ एनआरओ(NRO) पीआईओ(PIO) हैं",
+                "options": ["केवल निष्कर्ष I अनुसरण करता है", "या तो निष्कर्ष I या II अनुसरण करता है", "केवल निष्कर्ष II अनुसरण करता है", "निष्कर्ष I और II दोनों अनुसरण करते हैं", "न तो निष्कर्ष I और न ही II अनुसरण करता है"],
+                "correctAnswer": 4,
+                "explanation": "D is the grandfather of A, making A the grandson of D."
+            }
+        },
+         {
+            "english": {
+                "text": "In the following questions, some statements are given and followed by some conclusions. You have to decide which of the given conclusions logically follows from the given statements disregarding the commonly known facts.",
+                "question": "<b>Statements</b>\nOnly a few Magazines are Papers \nNo Magazine is Notes\nOnly a few Notes are Papers\n <b>Conclusions:</b> \nI).All Notes can be Papers \nII). Some Notes are not Papers",
+                "options": ["Only Conclusion I follow", "Neither Conclusion I nor II follows", "Only Conclusion II follows", "Both Conclusions I and II follow", "None of These"],
+                "correctAnswer": 1,
+                "explanation": "Each letter is represented by its position in the English alphabet (A=1, B=2, etc.)."
+            },
+            "hindi": {
+                "text": "निम्नलिखित कथनों का अध्ययन करें और फिर तय करें कि दिए गए निष्कर्षों में से कौन सा निष्कर्ष सामान्य रूप से ज्ञात तथ्यों की परवाह किए बिना दिए गए कथनों का तार्किक रूप से अनुसरण करता है।",
+                "question": "<b>कथन:</b>\nकेवल कुछ ही मैगजीन(Magazines) पेपर(Papers)\nकोई मैगजीन(Magazines) नोट्स(Notes) नहीं है\nकेवल कुछ ही नोट्स(Notes) पेपर(Papers) हैं\n<b>निष्कर्ष:</b>\nI).सभी नोट्स(Notes) पेपर(Papers) हो सकते ह \nII). कुछ नोट्स(Notes) पेपर(Papers) नहीं है",
+                "options": ["केवल निष्कर्ष I अनुसरण करता है", "न तो निष्कर्ष I और न ही II अनुसरण करता है ", "केवल निष्कर्ष II अनुसरण करता है", "निष्कर्ष I और II दोनों अनुसरण करते हैं", "इनम से कोई नहीं"],
+                "correctAnswer": 1,
+                "explanation": "D is the grandfather of A, making A the grandson of D."
+            }
+        },
+         {
+            "english": {
+                "text": "In the following questions, some statements are given and followed by some conclusions. You have to decide which of the given conclusions logically follows from the given statements disregarding the commonly known facts.",
+                "question": "<b>Statements</b>\nOnly a few colleges are schools \n No school is Office \n No home is school \n <b>Conclusions:</b> \nI).Some colleges are home is a possibility \nII). All colleges are office is not a possibility",
+                "options": ["Only Conclusion I follow", "Either Conclusion I or II follows", "Only Conclusion II follows", "Both Conclusions I and II follow", "Neither Conclusion I nor II follows"],
+                "correctAnswer": 4,
+                "explanation": "Each letter is represented by its position in the English alphabet (A=1, B=2, etc.)."
+            },
+            "hindi": {
+                "text": "निम्नलिखित कथनों का अध्ययन करें और फिर तय करें कि दिए गए निष्कर्षों में से कौन सा निष्कर्ष सामान्य रूप से ज्ञात तथ्यों की परवाह किए बिना दिए गए कथनों का तार्किक रूप से अनुसरण करता है।",
+                "question": "<b>कथन:</b>\n केवल कुछ ही कॉलेज(colleges) कूल(schools) है\nकोई कूल(schools) ऑिफस(Office) नहीं है\n कोई होम(home) कूल(school) नहीं है\n<b>निष्कर्ष:</b>\nI). कुछ कॉलेज(colleges) के होम(home) होने की संभावना है \nII). सभी कॉलेज(colleges) के ऑिफस(Office) होने की संभावना नहीं है",
+                "options": ["केवल निष्कर्ष I अनुसरण करता है", "या तो निष्कर्ष I या II अनुसरण करता है", "केवल निष्कर्ष II अनुसरण करता है", "निष्कर्ष I और II दोनों अनुसरण करते हैं", "न तो निष्कर्ष I और न ही II अनुसरण करता है"],
+                "correctAnswer": 4,
+                "explanation": "D is the grandfather of A, making A the grandson of D."
+            }
+        }
+		,
+         {
+            "english": {
+                "text": "In the following questions, some statements are given and followed by some conclusions. You have to decide which of the given conclusions logically follows from the given statements disregarding the commonly known facts.",
+                "question": "<b>Statements</b>\n Only a few Ostriches are Sparrows  \n No Sparrow is Peacock  \n All Peacocks are Ducks  \n <b>Conclusions:</b> \nI). Some Sparrows being Duck is a possibility \nII). Some Ostriches are not Peacocks ",
+                "options": ["Only Conclusion I follow", "Either Conclusion I or II follows", "Only Conclusion II follows", "Both Conclusions I and II follow", "Neither Conclusion I nor II follows"],
+                "correctAnswer": 4,
+                "explanation": "Each letter is represented by its position in the English alphabet (A=1, B=2, etc.)."
+            },
+            "hindi": {
+                "text": "निम्नलिखित कथनों का अध्ययन करें और फिर तय करें कि दिए गए निष्कर्षों में से कौन सा निष्कर्ष सामान्य रूप से ज्ञात तथ्यों की परवाह किए बिना दिए गए कथनों का तार्किक रूप से अनुसरण करता है।",
+                "question": "<b>कथन:</b>\n केवल कुछ ही ऑिटच(Ostriches) पैरो(Sparrow) है \n कोई पैरो(Sparrow) पीकॉक(Peacock) नहीं है\n सभी पीकॉक(Peacock) डक(Ducks) है\n<b>निष्कर्ष:</b>\nI).कुछ पैरो(Sparrow) के डक(Ducks) होने की संभावना है \nII). कुछ ऑिटच(Ostriches) पीकॉक(Peacock) नहीं है",
+                "options": ["केवल निष्कर्ष I अनुसरण करता है", "या तो निष्कर्ष I या II अनुसरण करता है", "केवल निष्कर्ष II अनुसरण करता है", "निष्कर्ष I और II दोनों अनुसरण करते हैं", "न तो निष्कर्ष I और न ही II अनुसरण करता है"],
+                "correctAnswer": 4,
+                "explanation": "D is the grandfather of A, making A the grandson of D."
+            }
+        },
+         {
+            "english": {
+                "text": "In the following questions, some statements are given and followed by some conclusions. You have to decide which of the given conclusions logically follows from the given statements disregarding the commonly known facts.",
+                "question": "<b>Statements</b>\n Only a few Seiko is Hermle \n Some Hermle is Chumbak \n Some Chumbak is Opal \n <b>Conclusions:</b> \nI). Some Hermle is Opal\nII). No Seiko is Chumbak ",
+                "options": ["Only Conclusion I follow", "Either Conclusion I or II follows", "Only Conclusion II follows", "Both Conclusions I and II follow", "Neither Conclusion I nor II follows"],
+                "correctAnswer": 4,
+                "explanation": "Each letter is represented by its position in the English alphabet (A=1, B=2, etc.)."
+            },
+            "hindi": {
+                "text": "निम्नलिखित कथनों का अध्ययन करें और फिर तय करें कि दिए गए निष्कर्षों में से कौन सा निष्कर्ष सामान्य रूप से ज्ञात तथ्यों की परवाह किए बिना दिए गए कथनों का तार्किक रूप से अनुसरण करता है।",
+                "question": "<b>कथन:</b>\n केवल कुछ ही सेको(Seiko) हमले(Hermle) है \n कुछ हमले(Hermle) चुबक(Chumbak) ह \n कुछ चुबक(Chumbak) ओपाल(Opal) ह \n<b>निष्कर्ष:</b>\nI).कुछ हमले(Hermle) ओपाल(Opal) है \nII). कोई सेको(Seiko) चुबक(Chumbak) नहीं है ",
+                "options": ["केवल निष्कर्ष I अनुसरण करता है", "या तो निष्कर्ष I या II अनुसरण करता है", "केवल निष्कर्ष II अनुसरण करता है", "निष्कर्ष I और II दोनों अनुसरण करते हैं", "न तो निष्कर्ष I और न ही II अनुसरण करता है"],
+                "correctAnswer": 4,
+                "explanation": "D is the grandfather of A, making A the grandson of D."
+            }
+        },
+         {
+            "english": {
+                "text": "In the following questions, some statements are given and followed by some conclusions. You have to decide which of the given conclusions logically follows from the given statements disregarding the commonly known facts.",
+                "question": "<b>Statements</b>\n Only a few Bulova is Titan  \n All Titan is Ajanta \n No Ajanta is Casio \n <b>Conclusions:</b> \nI). No Titan is Casio \nII). All Bulova is Ajanta ",
+                "options": ["Only Conclusion I follow", "Either Conclusion I or II follows", "Only Conclusion II follows", "Both Conclusions I and II follow", "Neither Conclusion I nor II follows"],
+                "correctAnswer": 0,
+                "explanation": "Each letter is represented by its position in the English alphabet (A=1, B=2, etc.)."
+            },
+            "hindi": {
+                "text": "निम्नलिखित कथनों का अध्ययन करें और फिर तय करें कि दिए गए निष्कर्षों में से कौन सा निष्कर्ष सामान्य रूप से ज्ञात तथ्यों की परवाह किए बिना दिए गए कथनों का तार्किक रूप से अनुसरण करता है।",
+                "question": "<b>कथन:</b> \n केवल कुछ ही बुलोवा(Bulova) टाइटन(Titan) है\n सभी टाइटन(Titan) अजंता(Ajanta) ह \n कोई अजंता(Ajanta) कैिसयो(Casio) नहीं है\n<b>निष्कर्ष:</b>\nI). कोई टाइटन(Titan) कैिसयो(Casio) नहीं है\nII). सभी बुलोवा(Bulova) अजंता(Ajanta) है ",
+                "options": ["केवल निष्कर्ष I अनुसरण करता है", "या तो निष्कर्ष I या II अनुसरण करता है", "केवल निष्कर्ष II अनुसरण करता है", "निष्कर्ष I और II दोनों अनुसरण करते हैं", "न तो निष्कर्ष I और न ही II अनुसरण करता है"],
+                "correctAnswer": 0,
+                "explanation": "D is the grandfather of A, making A the grandson of D."
+            }
+        },
+         {
+            "english": {
+                "text": "In each question, relationship between different elements is shown in the statements. The statements are followed by conclusions. Study the conclusions based on the given statements and select the appropriate answer.",
+                "question": "<b>Statements</b> \n   \n  \n  \n <b>Conclusions:</b> \nI).  \nII).  ",
+                "options": ["Only conclusion I is true", "Either conclusion I or II is true", "Only conclusion II is true", "Both conclusions I and II are true", "Neither conclusion I nor II is true"],
+                "correctAnswer": 0,
+                "explanation": "Each letter is represented by its position in the English alphabet (A=1, B=2, etc.)."
+            },
+            "hindi": {
+                "text": "िननिलिखत येक न म, िविभन तवों के बीच संबंध को कथनों म और उसके बाद दो िनकषो म िदखाया गया है। वह िनकष ात कीिजए जो िनिचत प से सय है।",
+                "question": "<b>कथन:</b> \n केवल कुछ ही बुलोवा(Bulova) टाइटन(Titan) है\n सभी टाइटन(Titan) अजंता(Ajanta) ह \n कोई अजंता(Ajanta) कैिसयो(Casio) नहीं है\n<b>निष्कर्ष:</b>\nI). कोई टाइटन(Titan) कैिसयो(Casio) नहीं है\nII). सभी बुलोवा(Bulova) अजंता(Ajanta) है ",
+                "options": ["केवल निष्कर्ष I अनुसरण करता है", "या तो निष्कर्ष I या II अनुसरण करता है", "केवल निष्कर्ष II अनुसरण करता है", "निष्कर्ष I और II दोनों अनुसरण करते हैं", "न तो निष्कर्ष I और न ही II अनुसरण करता है"],
+                "correctAnswer": 0,
+                "explanation": "D is the grandfather of A, making A the grandson of D."
+            }
+        },
+         {
+            "english": {
+                "text": "In each question, relationship between different elements is shown in the statements. The statements are followed by conclusions. Study the conclusions based on the given statements and select the appropriate answer.",
+                "question": "<b>Statements</b> \n   \n  \n  \n <b>Conclusions:</b> \nI).  \nII).  ",
+                "options": ["Only conclusion I is true", "Either conclusion I or II is true", "Only conclusion II is true", "Both conclusions I and II are true", "Neither conclusion I nor II is true"],
+                "correctAnswer": 0,
+                "explanation": "Each letter is represented by its position in the English alphabet (A=1, B=2, etc.)."
+            },
+            "hindi": {
+                "text": "िननिलिखत येक न म, िविभन तवों के बीच संबंध को कथनों म और उसके बाद दो िनकषो म िदखाया गया है। वह िनकष ात कीिजए जो िनिचत प से सय है।",
+                "question": "<b>कथन:</b> \n केवल कुछ ही बुलोवा(Bulova) टाइटन(Titan) है\n सभी टाइटन(Titan) अजंता(Ajanta) ह \n कोई अजंता(Ajanta) कैिसयो(Casio) नहीं है\n<b>निष्कर्ष:</b>\nI). कोई टाइटन(Titan) कैिसयो(Casio) नहीं है\nII). सभी बुलोवा(Bulova) अजंता(Ajanta) है ",
+                "options": ["केवल निष्कर्ष I अनुसरण करता है", "या तो निष्कर्ष I या II अनुसरण करता है", "केवल निष्कर्ष II अनुसरण करता है", "निष्कर्ष I और II दोनों अनुसरण करते हैं", "न तो निष्कर्ष I और न ही II अनुसरण करता है"],
+                "correctAnswer": 0,
+                "explanation": "D is the grandfather of A, making A the grandson of D."
+            }
+        },
+         {
+            "english": {
+                "text": "In each question, relationship between different elements is shown in the statements. The statements are followed by conclusions. Study the conclusions based on the given statements and select the appropriate answer.",
+                "question": "<b>Statements</b> \n   \n  \n  \n <b>Conclusions:</b> \nI).  \nII).  ",
+                "options": ["Only conclusion I is true", "Either conclusion I or II is true", "Only conclusion II is true", "Both conclusions I and II are true", "Neither conclusion I nor II is true"],
+                "correctAnswer": 0,
+                "explanation": "Each letter is represented by its position in the English alphabet (A=1, B=2, etc.)."
+            },
+            "hindi": {
+                "text": "िननिलिखत येक न म, िविभन तवों के बीच संबंध को कथनों म और उसके बाद दो िनकषो म िदखाया गया है। वह िनकष ात कीिजए जो िनिचत प से सय है।",
+                "question": "<b>कथन:</b> \n केवल कुछ ही बुलोवा(Bulova) टाइटन(Titan) है\n सभी टाइटन(Titan) अजंता(Ajanta) ह \n कोई अजंता(Ajanta) कैिसयो(Casio) नहीं है\n<b>निष्कर्ष:</b>\nI). कोई टाइटन(Titan) कैिसयो(Casio) नहीं है\nII). सभी बुलोवा(Bulova) अजंता(Ajanta) है ",
+                "options": ["केवल निष्कर्ष I अनुसरण करता है", "या तो निष्कर्ष I या II अनुसरण करता है", "केवल निष्कर्ष II अनुसरण करता है", "निष्कर्ष I और II दोनों अनुसरण करते हैं", "न तो निष्कर्ष I और न ही II अनुसरण करता है"],
+                "correctAnswer": 0,
+                "explanation": "D is the grandfather of A, making A the grandson of D."
+            }
+        },
+         {
+            "english": {
+                "text": "In each question, relationship between different elements is shown in the statements. The statements are followed by conclusions. Study the conclusions based on the given statements and select the appropriate answer.",
+                "question": "<b>Statements</b> \n   \n  \n  \n <b>Conclusions:</b> \nI).  \nII).  ",
+                "options": ["Only conclusion I is true", "Either conclusion I or II is true", "Only conclusion II is true", "Both conclusions I and II are true", "Neither conclusion I nor II is true"],
+                "correctAnswer": 0,
+                "explanation": "Each letter is represented by its position in the English alphabet (A=1, B=2, etc.)."
+            },
+            "hindi": {
+                "text": "िननिलिखत येक न म, िविभन तवों के बीच संबंध को कथनों म और उसके बाद दो िनकषो म िदखाया गया है। वह िनकष ात कीिजए जो िनिचत प से सय है।",
+                "question": "<b>कथन:</b> \n केवल कुछ ही बुलोवा(Bulova) टाइटन(Titan) है\n सभी टाइटन(Titan) अजंता(Ajanta) ह \n कोई अजंता(Ajanta) कैिसयो(Casio) नहीं है\n<b>निष्कर्ष:</b>\nI). कोई टाइटन(Titan) कैिसयो(Casio) नहीं है\nII). सभी बुलोवा(Bulova) अजंता(Ajanta) है ",
+                "options": ["केवल निष्कर्ष I अनुसरण करता है", "या तो निष्कर्ष I या II अनुसरण करता है", "केवल निष्कर्ष II अनुसरण करता है", "निष्कर्ष I और II दोनों अनुसरण करते हैं", "न तो निष्कर्ष I और न ही II अनुसरण करता है"],
+                "correctAnswer": 0,
+                "explanation": "D is the grandfather of A, making A the grandson of D."
+            }
+        },
+         {
+            "english": {
+                "text": "In each question, relationship between different elements is shown in the statements. The statements are followed by conclusions. Study the conclusions based on the given statements and select the appropriate answer.",
+                "question": "<b>Statements</b> \n   \n  \n  \n <b>Conclusions:</b> \nI).  \nII).  ",
+                "options": ["Only conclusion I is true", "Either conclusion I or II is true", "Only conclusion II is true", "Both conclusions I and II are true", "Neither conclusion I nor II is true"],
+                "correctAnswer": 0,
+                "explanation": "Each letter is represented by its position in the English alphabet (A=1, B=2, etc.)."
+            },
+            "hindi": {
+                "text": "िननिलिखत येक न म, िविभन तवों के बीच संबंध को कथनों म और उसके बाद दो िनकषो म िदखाया गया है। वह िनकष ात कीिजए जो िनिचत प से सय है।",
+                "question": "<b>कथन:</b> \n केवल कुछ ही बुलोवा(Bulova) टाइटन(Titan) है\n सभी टाइटन(Titan) अजंता(Ajanta) ह \n कोई अजंता(Ajanta) कैिसयो(Casio) नहीं है\n<b>निष्कर्ष:</b>\nI). कोई टाइटन(Titan) कैिसयो(Casio) नहीं है\nII). सभी बुलोवा(Bulova) अजंता(Ajanta) है ",
+                "options": ["केवल निष्कर्ष I अनुसरण करता है", "या तो निष्कर्ष I या II अनुसरण करता है", "केवल निष्कर्ष II अनुसरण करता है", "निष्कर्ष I और II दोनों अनुसरण करते हैं", "न तो निष्कर्ष I और न ही II अनुसरण करता है"],
+                "correctAnswer": 0,
+                "explanation": "D is the grandfather of A, making A the grandson of D."
+            }
+        },
+         {
+            "english": {
+                "text": "In each question, relationship between different elements is shown in the statements. The statements are followed by conclusions. Study the conclusions based on the given statements and select the appropriate answer.",
+                "question": "<b>Statements</b> \n   \n  \n  \n <b>Conclusions:</b> \nI).  \nII).  ",
+                "options": ["Only conclusion I is true", "Either conclusion I or II is true", "Only conclusion II is true", "Both conclusions I and II are true", "Neither conclusion I nor II is true"],
+                "correctAnswer": 0,
+                "explanation": "Each letter is represented by its position in the English alphabet (A=1, B=2, etc.)."
+            },
+            "hindi": {
+                "text": "िननिलिखत येक न म, िविभन तवों के बीच संबंध को कथनों म और उसके बाद दो िनकषो म िदखाया गया है। वह िनकष ात कीिजए जो िनिचत प से सय है।",
+                "question": "<b>कथन:</b> \n केवल कुछ ही बुलोवा(Bulova) टाइटन(Titan) है\n सभी टाइटन(Titan) अजंता(Ajanta) ह \n कोई अजंता(Ajanta) कैिसयो(Casio) नहीं है\n<b>निष्कर्ष:</b>\nI). कोई टाइटन(Titan) कैिसयो(Casio) नहीं है\nII). सभी बुलोवा(Bulova) अजंता(Ajanta) है ",
+                "options": ["केवल निष्कर्ष I अनुसरण करता है", "या तो निष्कर्ष I या II अनुसरण करता है", "केवल निष्कर्ष II अनुसरण करता है", "निष्कर्ष I और II दोनों अनुसरण करते हैं", "न तो निष्कर्ष I और न ही II अनुसरण करता है"],
+                "correctAnswer": 0,
+                "explanation": "D is the grandfather of A, making A the grandson of D."
+            }
+        },
+         {
+            "english": {
+                "text": "In each question, relationship between different elements is shown in the statements. The statements are followed by conclusions. Study the conclusions based on the given statements and select the appropriate answer.",
+                "question": "<b>Statements</b> \n   \n  \n  \n <b>Conclusions:</b> \nI).  \nII).  ",
+                "options": ["Only conclusion I is true", "Either conclusion I or II is true", "Only conclusion II is true", "Both conclusions I and II are true", "Neither conclusion I nor II is true"],
+                "correctAnswer": 0,
+                "explanation": "Each letter is represented by its position in the English alphabet (A=1, B=2, etc.)."
+            },
+            "hindi": {
+                "text": "िननिलिखत येक न म, िविभन तवों के बीच संबंध को कथनों म और उसके बाद दो िनकषो म िदखाया गया है। वह िनकष ात कीिजए जो िनिचत प से सय है।",
+                "question": "<b>कथन:</b> \n केवल कुछ ही बुलोवा(Bulova) टाइटन(Titan) है\n सभी टाइटन(Titan) अजंता(Ajanta) ह \n कोई अजंता(Ajanta) कैिसयो(Casio) नहीं है\n<b>निष्कर्ष:</b>\nI). कोई टाइटन(Titan) कैिसयो(Casio) नहीं है\nII). सभी बुलोवा(Bulova) अजंता(Ajanta) है ",
+                "options": ["केवल निष्कर्ष I अनुसरण करता है", "या तो निष्कर्ष I या II अनुसरण करता है", "केवल निष्कर्ष II अनुसरण करता है", "निष्कर्ष I और II दोनों अनुसरण करते हैं", "न तो निष्कर्ष I और न ही II अनुसरण करता है"],
+                "correctAnswer": 0,
+                "explanation": "D is the grandfather of A, making A the grandson of D."
+            }
+        },
+         {
+            "english": {
+                "text": "In each question, relationship between different elements is shown in the statements. The statements are followed by conclusions. Study the conclusions based on the given statements and select the appropriate answer.",
+                "question": "<b>Statements</b> \n   \n  \n  \n <b>Conclusions:</b> \nI).  \nII).  ",
+                "options": ["Only conclusion I is true", "Either conclusion I or II is true", "Only conclusion II is true", "Both conclusions I and II are true", "Neither conclusion I nor II is true"],
+                "correctAnswer": 0,
+                "explanation": "Each letter is represented by its position in the English alphabet (A=1, B=2, etc.)."
+            },
+            "hindi": {
+                "text": "िननिलिखत येक न म, िविभन तवों के बीच संबंध को कथनों म और उसके बाद दो िनकषो म िदखाया गया है। वह िनकष ात कीिजए जो िनिचत प से सय है।",
+                "question": "<b>कथन:</b> \n केवल कुछ ही बुलोवा(Bulova) टाइटन(Titan) है\n सभी टाइटन(Titan) अजंता(Ajanta) ह \n कोई अजंता(Ajanta) कैिसयो(Casio) नहीं है\n<b>निष्कर्ष:</b>\nI). कोई टाइटन(Titan) कैिसयो(Casio) नहीं है\nII). सभी बुलोवा(Bulova) अजंता(Ajanta) है ",
+                "options": ["केवल निष्कर्ष I अनुसरण करता है", "या तो निष्कर्ष I या II अनुसरण करता है", "केवल निष्कर्ष II अनुसरण करता है", "निष्कर्ष I और II दोनों अनुसरण करते हैं", "न तो निष्कर्ष I और न ही II अनुसरण करता है"],
+                "correctAnswer": 0,
+                "explanation": "D is the grandfather of A, making A the grandson of D."
+            }
+        },
+         {
+            "english": {
+                "text": "In each question, relationship between different elements is shown in the statements. The statements are followed by conclusions. Study the conclusions based on the given statements and select the appropriate answer.",
+                "question": "<b>Statements</b> \n   \n  \n  \n <b>Conclusions:</b> \nI).  \nII).  ",
+                "options": ["Only conclusion I is true", "Either conclusion I or II is true", "Only conclusion II is true", "Both conclusions I and II are true", "Neither conclusion I nor II is true"],
+                "correctAnswer": 0,
+                "explanation": "Each letter is represented by its position in the English alphabet (A=1, B=2, etc.)."
+            },
+            "hindi": {
+                "text": "िननिलिखत येक न म, िविभन तवों के बीच संबंध को कथनों म और उसके बाद दो िनकषो म िदखाया गया है। वह िनकष ात कीिजए जो िनिचत प से सय है।",
+                "question": "<b>कथन:</b> \n केवल कुछ ही बुलोवा(Bulova) टाइटन(Titan) है\n सभी टाइटन(Titan) अजंता(Ajanta) ह \n कोई अजंता(Ajanta) कैिसयो(Casio) नहीं है\n<b>निष्कर्ष:</b>\nI). कोई टाइटन(Titan) कैिसयो(Casio) नहीं है\nII). सभी बुलोवा(Bulova) अजंता(Ajanta) है ",
+                "options": ["केवल निष्कर्ष I अनुसरण करता है", "या तो निष्कर्ष I या II अनुसरण करता है", "केवल निष्कर्ष II अनुसरण करता है", "निष्कर्ष I और II दोनों अनुसरण करते हैं", "न तो निष्कर्ष I और न ही II अनुसरण करता है"],
+                "correctAnswer": 0,
+                "explanation": "D is the grandfather of A, making A the grandson of D."
+            }
+        },
+         {
+            "english": {
+                "text": "In each question, relationship between different elements is shown in the statements. The statements are followed by conclusions. Study the conclusions based on the given statements and select the appropriate answer.",
+                "question": "<b>Statements</b> \n   \n  \n  \n <b>Conclusions:</b> \nI).  \nII).  ",
+                "options": ["Only conclusion I is true", "Either conclusion I or II is true", "Only conclusion II is true", "Both conclusions I and II are true", "Neither conclusion I nor II is true"],
+                "correctAnswer": 0,
+                "explanation": "Each letter is represented by its position in the English alphabet (A=1, B=2, etc.)."
+            },
+            "hindi": {
+                "text": "िननिलिखत येक न म, िविभन तवों के बीच संबंध को कथनों म और उसके बाद दो िनकषो म िदखाया गया है। वह िनकष ात कीिजए जो िनिचत प से सय है।",
+                "question": "<b>कथन:</b> \n केवल कुछ ही बुलोवा(Bulova) टाइटन(Titan) है\n सभी टाइटन(Titan) अजंता(Ajanta) ह \n कोई अजंता(Ajanta) कैिसयो(Casio) नहीं है\n<b>निष्कर्ष:</b>\nI). कोई टाइटन(Titan) कैिसयो(Casio) नहीं है\nII). सभी बुलोवा(Bulova) अजंता(Ajanta) है ",
+                "options": ["केवल निष्कर्ष I अनुसरण करता है", "या तो निष्कर्ष I या II अनुसरण करता है", "केवल निष्कर्ष II अनुसरण करता है", "निष्कर्ष I और II दोनों अनुसरण करते हैं", "न तो निष्कर्ष I और न ही II अनुसरण करता है"],
+                "correctAnswer": 0,
+                "explanation": "D is the grandfather of A, making A the grandson of D."
+            }
+        },
+         {
+            "english": {
+                "text": "In each question, relationship between different elements is shown in the statements. The statements are followed by conclusions. Study the conclusions based on the given statements and select the appropriate answer.",
+                "question": "<b>Statements</b> \n   \n  \n  \n <b>Conclusions:</b> \nI).  \nII).  ",
+                "options": ["Only conclusion I is true", "Either conclusion I or II is true", "Only conclusion II is true", "Both conclusions I and II are true", "Neither conclusion I nor II is true"],
+                "correctAnswer": 0,
+                "explanation": "Each letter is represented by its position in the English alphabet (A=1, B=2, etc.)."
+            },
+            "hindi": {
+                "text": "िननिलिखत येक न म, िविभन तवों के बीच संबंध को कथनों म और उसके बाद दो िनकषो म िदखाया गया है। वह िनकष ात कीिजए जो िनिचत प से सय है।",
+                "question": "<b>कथन:</b> \n केवल कुछ ही बुलोवा(Bulova) टाइटन(Titan) है\n सभी टाइटन(Titan) अजंता(Ajanta) ह \n कोई अजंता(Ajanta) कैिसयो(Casio) नहीं है\n<b>निष्कर्ष:</b>\nI). कोई टाइटन(Titan) कैिसयो(Casio) नहीं है\nII). सभी बुलोवा(Bulova) अजंता(Ajanta) है ",
+                "options": ["केवल निष्कर्ष I अनुसरण करता है", "या तो निष्कर्ष I या II अनुसरण करता है", "केवल निष्कर्ष II अनुसरण करता है", "निष्कर्ष I और II दोनों अनुसरण करते हैं", "न तो निष्कर्ष I और न ही II अनुसरण करता है"],
+                "correctAnswer": 0,
+                "explanation": "D is the grandfather of A, making A the grandson of D."
+            }
+        },
+         {
+            "english": {
+                "text": "In each question, relationship between different elements is shown in the statements. The statements are followed by conclusions. Study the conclusions based on the given statements and select the appropriate answer.",
+                "question": "<b>Statements</b> \n   \n  \n  \n <b>Conclusions:</b> \nI).  \nII).  ",
+                "options": ["Only conclusion I is true", "Either conclusion I or II is true", "Only conclusion II is true", "Both conclusions I and II are true", "Neither conclusion I nor II is true"],
+                "correctAnswer": 0,
+                "explanation": "Each letter is represented by its position in the English alphabet (A=1, B=2, etc.)."
+            },
+            "hindi": {
+                "text": "िननिलिखत येक न म, िविभन तवों के बीच संबंध को कथनों म और उसके बाद दो िनकषो म िदखाया गया है। वह िनकष ात कीिजए जो िनिचत प से सय है।",
+                "question": "<b>कथन:</b> \n केवल कुछ ही बुलोवा(Bulova) टाइटन(Titan) है\n सभी टाइटन(Titan) अजंता(Ajanta) ह \n कोई अजंता(Ajanta) कैिसयो(Casio) नहीं है\n<b>निष्कर्ष:</b>\nI). कोई टाइटन(Titan) कैिसयो(Casio) नहीं है\nII). सभी बुलोवा(Bulova) अजंता(Ajanta) है ",
+                "options": ["केवल निष्कर्ष I अनुसरण करता है", "या तो निष्कर्ष I या II अनुसरण करता है", "केवल निष्कर्ष II अनुसरण करता है", "निष्कर्ष I और II दोनों अनुसरण करते हैं", "न तो निष्कर्ष I और न ही II अनुसरण करता है"],
+                "correctAnswer": 0,
+                "explanation": "D is the grandfather of A, making A the grandson of D."
+            }
+        },
+         {
+            "english": {
+                "text": "In each question, relationship between different elements is shown in the statements. The statements are followed by conclusions. Study the conclusions based on the given statements and select the appropriate answer.",
+                "question": "<b>Statements</b> \n   \n  \n  \n <b>Conclusions:</b> \nI).  \nII).  ",
+                "options": ["Only conclusion I is true", "Either conclusion I or II is true", "Only conclusion II is true", "Both conclusions I and II are true", "Neither conclusion I nor II is true"],
+                "correctAnswer": 0,
+                "explanation": "Each letter is represented by its position in the English alphabet (A=1, B=2, etc.)."
+            },
+            "hindi": {
+                "text": "िननिलिखत येक न म, िविभन तवों के बीच संबंध को कथनों म और उसके बाद दो िनकषो म िदखाया गया है। वह िनकष ात कीिजए जो िनिचत प से सय है।",
+                "question": "<b>कथन:</b> \n केवल कुछ ही बुलोवा(Bulova) टाइटन(Titan) है\n सभी टाइटन(Titan) अजंता(Ajanta) ह \n कोई अजंता(Ajanta) कैिसयो(Casio) नहीं है\n<b>निष्कर्ष:</b>\nI). कोई टाइटन(Titan) कैिसयो(Casio) नहीं है\nII). सभी बुलोवा(Bulova) अजंता(Ajanta) है ",
+                "options": ["केवल निष्कर्ष I अनुसरण करता है", "या तो निष्कर्ष I या II अनुसरण करता है", "केवल निष्कर्ष II अनुसरण करता है", "निष्कर्ष I और II दोनों अनुसरण करते हैं", "न तो निष्कर्ष I और न ही II अनुसरण करता है"],
+                "correctAnswer": 0,
+                "explanation": "D is the grandfather of A, making A the grandson of D."
+            }
+        },
+         {
+            "english": {
+                "text": "In each question, relationship between different elements is shown in the statements. The statements are followed by conclusions. Study the conclusions based on the given statements and select the appropriate answer.",
+                "question": "<b>Statements</b> \n   \n  \n  \n <b>Conclusions:</b> \nI).  \nII).  ",
+                "options": ["Only conclusion I is true", "Either conclusion I or II is true", "Only conclusion II is true", "Both conclusions I and II are true", "Neither conclusion I nor II is true"],
+                "correctAnswer": 0,
+                "explanation": "Each letter is represented by its position in the English alphabet (A=1, B=2, etc.)."
+            },
+            "hindi": {
+                "text": "िननिलिखत येक न म, िविभन तवों के बीच संबंध को कथनों म और उसके बाद दो िनकषो म िदखाया गया है। वह िनकष ात कीिजए जो िनिचत प से सय है।",
+                "question": "<b>कथन:</b> \n केवल कुछ ही बुलोवा(Bulova) टाइटन(Titan) है\n सभी टाइटन(Titan) अजंता(Ajanta) ह \n कोई अजंता(Ajanta) कैिसयो(Casio) नहीं है\n<b>निष्कर्ष:</b>\nI). कोई टाइटन(Titan) कैिसयो(Casio) नहीं है\nII). सभी बुलोवा(Bulova) अजंता(Ajanta) है ",
+                "options": ["केवल निष्कर्ष I अनुसरण करता है", "या तो निष्कर्ष I या II अनुसरण करता है", "केवल निष्कर्ष II अनुसरण करता है", "निष्कर्ष I और II दोनों अनुसरण करते हैं", "न तो निष्कर्ष I और न ही II अनुसरण करता है"],
+                "correctAnswer": 0,
+                "explanation": "D is the grandfather of A, making A the grandson of D."
+            }
+        },
+         {
+            "english": {
+                "text": "In each question, relationship between different elements is shown in the statements. The statements are followed by conclusions. Study the conclusions based on the given statements and select the appropriate answer.",
+                "question": "<b>Statements</b> \n   \n  \n  \n <b>Conclusions:</b> \nI).  \nII).  ",
+                "options": ["Only conclusion I is true", "Either conclusion I or II is true", "Only conclusion II is true", "Both conclusions I and II are true", "Neither conclusion I nor II is true"],
+                "correctAnswer": 0,
+                "explanation": "Each letter is represented by its position in the English alphabet (A=1, B=2, etc.)."
+            },
+            "hindi": {
+                "text": "िननिलिखत येक न म, िविभन तवों के बीच संबंध को कथनों म और उसके बाद दो िनकषो म िदखाया गया है। वह िनकष ात कीिजए जो िनिचत प से सय है।",
+                "question": "<b>कथन:</b> \n केवल कुछ ही बुलोवा(Bulova) टाइटन(Titan) है\n सभी टाइटन(Titan) अजंता(Ajanta) ह \n कोई अजंता(Ajanta) कैिसयो(Casio) नहीं है\n<b>निष्कर्ष:</b>\nI). कोई टाइटन(Titan) कैिसयो(Casio) नहीं है\nII). सभी बुलोवा(Bulova) अजंता(Ajanta) है ",
+                "options": ["केवल निष्कर्ष I अनुसरण करता है", "या तो निष्कर्ष I या II अनुसरण करता है", "केवल निष्कर्ष II अनुसरण करता है", "निष्कर्ष I और II दोनों अनुसरण करते हैं", "न तो निष्कर्ष I और न ही II अनुसरण करता है"],
+                "correctAnswer": 0,
+                "explanation": "D is the grandfather of A, making A the grandson of D."
+            }
+        },
+         {
+            "english": {
+                "text": "In each question, relationship between different elements is shown in the statements. The statements are followed by conclusions. Study the conclusions based on the given statements and select the appropriate answer.",
+                "question": "<b>Statements</b> \n   \n  \n  \n <b>Conclusions:</b> \nI).  \nII).  ",
+                "options": ["Only conclusion I is true", "Either conclusion I or II is true", "Only conclusion II is true", "Both conclusions I and II are true", "Neither conclusion I nor II is true"],
+                "correctAnswer": 0,
+                "explanation": "Each letter is represented by its position in the English alphabet (A=1, B=2, etc.)."
+            },
+            "hindi": {
+                "text": "िननिलिखत येक न म, िविभन तवों के बीच संबंध को कथनों म और उसके बाद दो िनकषो म िदखाया गया है। वह िनकष ात कीिजए जो िनिचत प से सय है।",
+                "question": "<b>कथन:</b> \n केवल कुछ ही बुलोवा(Bulova) टाइटन(Titan) है\n सभी टाइटन(Titan) अजंता(Ajanta) ह \n कोई अजंता(Ajanta) कैिसयो(Casio) नहीं है\n<b>निष्कर्ष:</b>\nI). कोई टाइटन(Titan) कैिसयो(Casio) नहीं है\nII). सभी बुलोवा(Bulova) अजंता(Ajanta) है ",
+                "options": ["केवल निष्कर्ष I अनुसरण करता है", "या तो निष्कर्ष I या II अनुसरण करता है", "केवल निष्कर्ष II अनुसरण करता है", "निष्कर्ष I और II दोनों अनुसरण करते हैं", "न तो निष्कर्ष I और न ही II अनुसरण करता है"],
+                "correctAnswer": 0,
+                "explanation": "D is the grandfather of A, making A the grandson of D."
+            }
+        },
+         {
+            "english": {
+                "text": "In each question, relationship between different elements is shown in the statements. The statements are followed by conclusions. Study the conclusions based on the given statements and select the appropriate answer.",
+                "question": "<b>Statements</b> \n   \n  \n  \n <b>Conclusions:</b> \nI).  \nII).  ",
+                "options": ["Only conclusion I is true", "Either conclusion I or II is true", "Only conclusion II is true", "Both conclusions I and II are true", "Neither conclusion I nor II is true"],
+                "correctAnswer": 0,
+                "explanation": "Each letter is represented by its position in the English alphabet (A=1, B=2, etc.)."
+            },
+            "hindi": {
+                "text": "िननिलिखत येक न म, िविभन तवों के बीच संबंध को कथनों म और उसके बाद दो िनकषो म िदखाया गया है। वह िनकष ात कीिजए जो िनिचत प से सय है।",
+                "question": "<b>कथन:</b> \n केवल कुछ ही बुलोवा(Bulova) टाइटन(Titan) है\n सभी टाइटन(Titan) अजंता(Ajanta) ह \n कोई अजंता(Ajanta) कैिसयो(Casio) नहीं है\n<b>निष्कर्ष:</b>\nI). कोई टाइटन(Titan) कैिसयो(Casio) नहीं है\nII). सभी बुलोवा(Bulova) अजंता(Ajanta) है ",
+                "options": ["केवल निष्कर्ष I अनुसरण करता है", "या तो निष्कर्ष I या II अनुसरण करता है", "केवल निष्कर्ष II अनुसरण करता है", "निष्कर्ष I और II दोनों अनुसरण करते हैं", "न तो निष्कर्ष I और न ही II अनुसरण करता है"],
+                "correctAnswer": 0,
+                "explanation": "D is the grandfather of A, making A the grandson of D."
+            }
+        },
+         {
+            "english": {
+                "text": "In each question, relationship between different elements is shown in the statements. The statements are followed by conclusions. Study the conclusions based on the given statements and select the appropriate answer.",
+                "question": "<b>Statements</b> \n   \n  \n  \n <b>Conclusions:</b> \nI).  \nII).  ",
+                "options": ["Only conclusion I is true", "Either conclusion I or II is true", "Only conclusion II is true", "Both conclusions I and II are true", "Neither conclusion I nor II is true"],
+                "correctAnswer": 0,
+                "explanation": "Each letter is represented by its position in the English alphabet (A=1, B=2, etc.)."
+            },
+            "hindi": {
+                "text": "िननिलिखत येक न म, िविभन तवों के बीच संबंध को कथनों म और उसके बाद दो िनकषो म िदखाया गया है। वह िनकष ात कीिजए जो िनिचत प से सय है।",
+                "question": "<b>कथन:</b> \n केवल कुछ ही बुलोवा(Bulova) टाइटन(Titan) है\n सभी टाइटन(Titan) अजंता(Ajanta) ह \n कोई अजंता(Ajanta) कैिसयो(Casio) नहीं है\n<b>निष्कर्ष:</b>\nI). कोई टाइटन(Titan) कैिसयो(Casio) नहीं है\nII). सभी बुलोवा(Bulova) अजंता(Ajanta) है ",
+                "options": ["केवल निष्कर्ष I अनुसरण करता है", "या तो निष्कर्ष I या II अनुसरण करता है", "केवल निष्कर्ष II अनुसरण करता है", "निष्कर्ष I और II दोनों अनुसरण करते हैं", "न तो निष्कर्ष I और न ही II अनुसरण करता है"],
+                "correctAnswer": 0,
+                "explanation": "D is the grandfather of A, making A the grandson of D."
+            }
+        },
+         {
+            "english": {
+                "text": "In each question, relationship between different elements is shown in the statements. The statements are followed by conclusions. Study the conclusions based on the given statements and select the appropriate answer.",
+                "question": "<b>Statements</b> \n   \n  \n  \n <b>Conclusions:</b> \nI).  \nII).  ",
+                "options": ["Only conclusion I is true", "Either conclusion I or II is true", "Only conclusion II is true", "Both conclusions I and II are true", "Neither conclusion I nor II is true"],
+                "correctAnswer": 0,
+                "explanation": "Each letter is represented by its position in the English alphabet (A=1, B=2, etc.)."
+            },
+            "hindi": {
+                "text": "िननिलिखत येक न म, िविभन तवों के बीच संबंध को कथनों म और उसके बाद दो िनकषो म िदखाया गया है। वह िनकष ात कीिजए जो िनिचत प से सय है।",
+                "question": "<b>कथन:</b> \n केवल कुछ ही बुलोवा(Bulova) टाइटन(Titan) है\n सभी टाइटन(Titan) अजंता(Ajanta) ह \n कोई अजंता(Ajanta) कैिसयो(Casio) नहीं है\n<b>निष्कर्ष:</b>\nI). कोई टाइटन(Titan) कैिसयो(Casio) नहीं है\nII). सभी बुलोवा(Bulova) अजंता(Ajanta) है ",
+                "options": ["केवल निष्कर्ष I अनुसरण करता है", "या तो निष्कर्ष I या II अनुसरण करता है", "केवल निष्कर्ष II अनुसरण करता है", "निष्कर्ष I और II दोनों अनुसरण करते हैं", "न तो निष्कर्ष I और न ही II अनुसरण करता है"],
+                "correctAnswer": 0,
+                "explanation": "D is the grandfather of A, making A the grandson of D."
+            }
+        },
+         {
+            "english": {
+                "text": "In each question, relationship between different elements is shown in the statements. The statements are followed by conclusions. Study the conclusions based on the given statements and select the appropriate answer.",
+                "question": "<b>Statements</b> \n   \n  \n  \n <b>Conclusions:</b> \nI).  \nII).  ",
+                "options": ["Only conclusion I is true", "Either conclusion I or II is true", "Only conclusion II is true", "Both conclusions I and II are true", "Neither conclusion I nor II is true"],
+                "correctAnswer": 0,
+                "explanation": "Each letter is represented by its position in the English alphabet (A=1, B=2, etc.)."
+            },
+            "hindi": {
+                "text": "िननिलिखत येक न म, िविभन तवों के बीच संबंध को कथनों म और उसके बाद दो िनकषो म िदखाया गया है। वह िनकष ात कीिजए जो िनिचत प से सय है।",
+                "question": "<b>कथन:</b> \n केवल कुछ ही बुलोवा(Bulova) टाइटन(Titan) है\n सभी टाइटन(Titan) अजंता(Ajanta) ह \n कोई अजंता(Ajanta) कैिसयो(Casio) नहीं है\n<b>निष्कर्ष:</b>\nI). कोई टाइटन(Titan) कैिसयो(Casio) नहीं है\nII). सभी बुलोवा(Bulova) अजंता(Ajanta) है ",
+                "options": ["केवल निष्कर्ष I अनुसरण करता है", "या तो निष्कर्ष I या II अनुसरण करता है", "केवल निष्कर्ष II अनुसरण करता है", "निष्कर्ष I और II दोनों अनुसरण करते हैं", "न तो निष्कर्ष I और न ही II अनुसरण करता है"],
+                "correctAnswer": 0,
+                "explanation": "D is the grandfather of A, making A the grandson of D."
+            }
+        },
+         {
+            "english": {
+                "text": "In each question, relationship between different elements is shown in the statements. The statements are followed by conclusions. Study the conclusions based on the given statements and select the appropriate answer.",
+                "question": "<b>Statements</b> \n   \n  \n  \n <b>Conclusions:</b> \nI).  \nII).  ",
+                "options": ["Only conclusion I is true", "Either conclusion I or II is true", "Only conclusion II is true", "Both conclusions I and II are true", "Neither conclusion I nor II is true"],
+                "correctAnswer": 0,
+                "explanation": "Each letter is represented by its position in the English alphabet (A=1, B=2, etc.)."
+            },
+            "hindi": {
+                "text": "िननिलिखत येक न म, िविभन तवों के बीच संबंध को कथनों म और उसके बाद दो िनकषो म िदखाया गया है। वह िनकष ात कीिजए जो िनिचत प से सय है।",
+                "question": "<b>कथन:</b> \n केवल कुछ ही बुलोवा(Bulova) टाइटन(Titan) है\n सभी टाइटन(Titan) अजंता(Ajanta) ह \n कोई अजंता(Ajanta) कैिसयो(Casio) नहीं है\n<b>निष्कर्ष:</b>\nI). कोई टाइटन(Titan) कैिसयो(Casio) नहीं है\nII). सभी बुलोवा(Bulova) अजंता(Ajanta) है ",
+                "options": ["केवल निष्कर्ष I अनुसरण करता है", "या तो निष्कर्ष I या II अनुसरण करता है", "केवल निष्कर्ष II अनुसरण करता है", "निष्कर्ष I और II दोनों अनुसरण करते हैं", "न तो निष्कर्ष I और न ही II अनुसरण करता है"],
+                "correctAnswer": 0,
+                "explanation": "D is the grandfather of A, making A the grandson of D."
+            }
+        },
+         {
+            "english": {
+                "text": "In each question, relationship between different elements is shown in the statements. The statements are followed by conclusions. Study the conclusions based on the given statements and select the appropriate answer.",
+                "question": "<b>Statements</b> \n   \n  \n  \n <b>Conclusions:</b> \nI).  \nII).  ",
+                "options": ["Only conclusion I is true", "Either conclusion I or II is true", "Only conclusion II is true", "Both conclusions I and II are true", "Neither conclusion I nor II is true"],
+                "correctAnswer": 0,
+                "explanation": "Each letter is represented by its position in the English alphabet (A=1, B=2, etc.)."
+            },
+            "hindi": {
+                "text": "िननिलिखत येक न म, िविभन तवों के बीच संबंध को कथनों म और उसके बाद दो िनकषो म िदखाया गया है। वह िनकष ात कीिजए जो िनिचत प से सय है।",
+                "question": "<b>कथन:</b> \n केवल कुछ ही बुलोवा(Bulova) टाइटन(Titan) है\n सभी टाइटन(Titan) अजंता(Ajanta) ह \n कोई अजंता(Ajanta) कैिसयो(Casio) नहीं है\n<b>निष्कर्ष:</b>\nI). कोई टाइटन(Titan) कैिसयो(Casio) नहीं है\nII). सभी बुलोवा(Bulova) अजंता(Ajanta) है ",
+                "options": ["केवल निष्कर्ष I अनुसरण करता है", "या तो निष्कर्ष I या II अनुसरण करता है", "केवल निष्कर्ष II अनुसरण करता है", "निष्कर्ष I और II दोनों अनुसरण करते हैं", "न तो निष्कर्ष I और न ही II अनुसरण करता है"],
+                "correctAnswer": 0,
+                "explanation": "D is the grandfather of A, making A the grandson of D."
+            }
+        },
+         {
+            "english": {
+                "text": "In each question, relationship between different elements is shown in the statements. The statements are followed by conclusions. Study the conclusions based on the given statements and select the appropriate answer.",
+                "question": "<b>Statements</b> \n   \n  \n  \n <b>Conclusions:</b> \nI).  \nII).  ",
+                "options": ["Only conclusion I is true", "Either conclusion I or II is true", "Only conclusion II is true", "Both conclusions I and II are true", "Neither conclusion I nor II is true"],
+                "correctAnswer": 0,
+                "explanation": "Each letter is represented by its position in the English alphabet (A=1, B=2, etc.)."
+            },
+            "hindi": {
+                "text": "िननिलिखत येक न म, िविभन तवों के बीच संबंध को कथनों म और उसके बाद दो िनकषो म िदखाया गया है। वह िनकष ात कीिजए जो िनिचत प से सय है।",
+                "question": "<b>कथन:</b> \n केवल कुछ ही बुलोवा(Bulova) टाइटन(Titan) है\n सभी टाइटन(Titan) अजंता(Ajanta) ह \n कोई अजंता(Ajanta) कैिसयो(Casio) नहीं है\n<b>निष्कर्ष:</b>\nI). कोई टाइटन(Titan) कैिसयो(Casio) नहीं है\nII). सभी बुलोवा(Bulova) अजंता(Ajanta) है ",
+                "options": ["केवल निष्कर्ष I अनुसरण करता है", "या तो निष्कर्ष I या II अनुसरण करता है", "केवल निष्कर्ष II अनुसरण करता है", "निष्कर्ष I और II दोनों अनुसरण करते हैं", "न तो निष्कर्ष I और न ही II अनुसरण करता है"],
+                "correctAnswer": 0,
+                "explanation": "D is the grandfather of A, making A the grandson of D."
+            }
+        },
+         {
+            "english": {
+                "text": "In each question, relationship between different elements is shown in the statements. The statements are followed by conclusions. Study the conclusions based on the given statements and select the appropriate answer.",
+                "question": "<b>Statements</b> \n   \n  \n  \n <b>Conclusions:</b> \nI).  \nII).  ",
+                "options": ["Only conclusion I is true", "Either conclusion I or II is true", "Only conclusion II is true", "Both conclusions I and II are true", "Neither conclusion I nor II is true"],
+                "correctAnswer": 0,
+                "explanation": "Each letter is represented by its position in the English alphabet (A=1, B=2, etc.)."
+            },
+            "hindi": {
+                "text": "िननिलिखत येक न म, िविभन तवों के बीच संबंध को कथनों म और उसके बाद दो िनकषो म िदखाया गया है। वह िनकष ात कीिजए जो िनिचत प से सय है।",
+                "question": "<b>कथन:</b> \n केवल कुछ ही बुलोवा(Bulova) टाइटन(Titan) है\n सभी टाइटन(Titan) अजंता(Ajanta) ह \n कोई अजंता(Ajanta) कैिसयो(Casio) नहीं है\n<b>निष्कर्ष:</b>\nI). कोई टाइटन(Titan) कैिसयो(Casio) नहीं है\nII). सभी बुलोवा(Bulova) अजंता(Ajanta) है ",
+                "options": ["केवल निष्कर्ष I अनुसरण करता है", "या तो निष्कर्ष I या II अनुसरण करता है", "केवल निष्कर्ष II अनुसरण करता है", "निष्कर्ष I और II दोनों अनुसरण करते हैं", "न तो निष्कर्ष I और न ही II अनुसरण करता है"],
+                "correctAnswer": 0,
+                "explanation": "D is the grandfather of A, making A the grandson of D."
+            }
+        },
+         {
+            "english": {
+                "text": "In each question, relationship between different elements is shown in the statements. The statements are followed by conclusions. Study the conclusions based on the given statements and select the appropriate answer.",
+                "question": "<b>Statements</b> \n   \n  \n  \n <b>Conclusions:</b> \nI).  \nII).  ",
+                "options": ["Only conclusion I is true", "Either conclusion I or II is true", "Only conclusion II is true", "Both conclusions I and II are true", "Neither conclusion I nor II is true"],
+                "correctAnswer": 0,
+                "explanation": "Each letter is represented by its position in the English alphabet (A=1, B=2, etc.)."
+            },
+            "hindi": {
+                "text": "िननिलिखत येक न म, िविभन तवों के बीच संबंध को कथनों म और उसके बाद दो िनकषो म िदखाया गया है। वह िनकष ात कीिजए जो िनिचत प से सय है।",
+                "question": "<b>कथन:</b> \n केवल कुछ ही बुलोवा(Bulova) टाइटन(Titan) है\n सभी टाइटन(Titan) अजंता(Ajanta) ह \n कोई अजंता(Ajanta) कैिसयो(Casio) नहीं है\n<b>निष्कर्ष:</b>\nI). कोई टाइटन(Titan) कैिसयो(Casio) नहीं है\nII). सभी बुलोवा(Bulova) अजंता(Ajanta) है ",
+                "options": ["केवल निष्कर्ष I अनुसरण करता है", "या तो निष्कर्ष I या II अनुसरण करता है", "केवल निष्कर्ष II अनुसरण करता है", "निष्कर्ष I और II दोनों अनुसरण करते हैं", "न तो निष्कर्ष I और न ही II अनुसरण करता है"],
+                "correctAnswer": 0,
+                "explanation": "D is the grandfather of A, making A the grandson of D."
+            }
+        },
+         {
+            "english": {
+                "text": "In each question, relationship between different elements is shown in the statements. The statements are followed by conclusions. Study the conclusions based on the given statements and select the appropriate answer.",
+                "question": "<b>Statements</b> \n   \n  \n  \n <b>Conclusions:</b> \nI).  \nII).  ",
+                "options": ["Only conclusion I is true", "Either conclusion I or II is true", "Only conclusion II is true", "Both conclusions I and II are true", "Neither conclusion I nor II is true"],
+                "correctAnswer": 0,
+                "explanation": "Each letter is represented by its position in the English alphabet (A=1, B=2, etc.)."
+            },
+            "hindi": {
+                "text": "िननिलिखत येक न म, िविभन तवों के बीच संबंध को कथनों म और उसके बाद दो िनकषो म िदखाया गया है। वह िनकष ात कीिजए जो िनिचत प से सय है।",
+                "question": "<b>कथन:</b> \n केवल कुछ ही बुलोवा(Bulova) टाइटन(Titan) है\n सभी टाइटन(Titan) अजंता(Ajanta) ह \n कोई अजंता(Ajanta) कैिसयो(Casio) नहीं है\n<b>निष्कर्ष:</b>\nI). कोई टाइटन(Titan) कैिसयो(Casio) नहीं है\nII). सभी बुलोवा(Bulova) अजंता(Ajanta) है ",
+                "options": ["केवल निष्कर्ष I अनुसरण करता है", "या तो निष्कर्ष I या II अनुसरण करता है", "केवल निष्कर्ष II अनुसरण करता है", "निष्कर्ष I और II दोनों अनुसरण करते हैं", "न तो निष्कर्ष I और न ही II अनुसरण करता है"],
+                "correctAnswer": 0,
+                "explanation": "D is the grandfather of A, making A the grandson of D."
+            }
+        },
+         {
+            "english": {
+                "text": "In each question, relationship between different elements is shown in the statements. The statements are followed by conclusions. Study the conclusions based on the given statements and select the appropriate answer.",
+                "question": "<b>Statements</b> \n   \n  \n  \n <b>Conclusions:</b> \nI).  \nII).  ",
+                "options": ["Only conclusion I is true", "Either conclusion I or II is true", "Only conclusion II is true", "Both conclusions I and II are true", "Neither conclusion I nor II is true"],
+                "correctAnswer": 0,
+                "explanation": "Each letter is represented by its position in the English alphabet (A=1, B=2, etc.)."
+            },
+            "hindi": {
+                "text": "िननिलिखत येक न म, िविभन तवों के बीच संबंध को कथनों म और उसके बाद दो िनकषो म िदखाया गया है। वह िनकष ात कीिजए जो िनिचत प से सय है।",
+                "question": "<b>कथन:</b> \n केवल कुछ ही बुलोवा(Bulova) टाइटन(Titan) है\n सभी टाइटन(Titan) अजंता(Ajanta) ह \n कोई अजंता(Ajanta) कैिसयो(Casio) नहीं है\n<b>निष्कर्ष:</b>\nI). कोई टाइटन(Titan) कैिसयो(Casio) नहीं है\nII). सभी बुलोवा(Bulova) अजंता(Ajanta) है ",
+                "options": ["केवल निष्कर्ष I अनुसरण करता है", "या तो निष्कर्ष I या II अनुसरण करता है", "केवल निष्कर्ष II अनुसरण करता है", "निष्कर्ष I और II दोनों अनुसरण करते हैं", "न तो निष्कर्ष I और न ही II अनुसरण करता है"],
+                "correctAnswer": 0,
+                "explanation": "D is the grandfather of A, making A the grandson of D."
+            }
+        },
+         {
+            "english": {
+                "text": "In each question, relationship between different elements is shown in the statements. The statements are followed by conclusions. Study the conclusions based on the given statements and select the appropriate answer.",
+                "question": "<b>Statements</b> \n   \n  \n  \n <b>Conclusions:</b> \nI).  \nII).  ",
+                "options": ["Only conclusion I is true", "Either conclusion I or II is true", "Only conclusion II is true", "Both conclusions I and II are true", "Neither conclusion I nor II is true"],
+                "correctAnswer": 0,
+                "explanation": "Each letter is represented by its position in the English alphabet (A=1, B=2, etc.)."
+            },
+            "hindi": {
+                "text": "िननिलिखत येक न म, िविभन तवों के बीच संबंध को कथनों म और उसके बाद दो िनकषो म िदखाया गया है। वह िनकष ात कीिजए जो िनिचत प से सय है।",
+                "question": "<b>कथन:</b> \n केवल कुछ ही बुलोवा(Bulova) टाइटन(Titan) है\n सभी टाइटन(Titan) अजंता(Ajanta) ह \n कोई अजंता(Ajanta) कैिसयो(Casio) नहीं है\n<b>निष्कर्ष:</b>\nI). कोई टाइटन(Titan) कैिसयो(Casio) नहीं है\nII). सभी बुलोवा(Bulova) अजंता(Ajanta) है ",
+                "options": ["केवल निष्कर्ष I अनुसरण करता है", "या तो निष्कर्ष I या II अनुसरण करता है", "केवल निष्कर्ष II अनुसरण करता है", "निष्कर्ष I और II दोनों अनुसरण करते हैं", "न तो निष्कर्ष I और न ही II अनुसरण करता है"],
+                "correctAnswer": 0,
+                "explanation": "D is the grandfather of A, making A the grandson of D."
+            }
+        },
+         {
+            "english": {
+                "text": "In each question, relationship between different elements is shown in the statements. The statements are followed by conclusions. Study the conclusions based on the given statements and select the appropriate answer.",
+                "question": "<b>Statements</b> \n   \n  \n  \n <b>Conclusions:</b> \nI).  \nII).  ",
+                "options": ["Only conclusion I is true", "Either conclusion I or II is true", "Only conclusion II is true", "Both conclusions I and II are true", "Neither conclusion I nor II is true"],
+                "correctAnswer": 0,
+                "explanation": "Each letter is represented by its position in the English alphabet (A=1, B=2, etc.)."
+            },
+            "hindi": {
+                "text": "िननिलिखत येक न म, िविभन तवों के बीच संबंध को कथनों म और उसके बाद दो िनकषो म िदखाया गया है। वह िनकष ात कीिजए जो िनिचत प से सय है।",
+                "question": "<b>कथन:</b> \n केवल कुछ ही बुलोवा(Bulova) टाइटन(Titan) है\n सभी टाइटन(Titan) अजंता(Ajanta) ह \n कोई अजंता(Ajanta) कैिसयो(Casio) नहीं है\n<b>निष्कर्ष:</b>\nI). कोई टाइटन(Titan) कैिसयो(Casio) नहीं है\nII). सभी बुलोवा(Bulova) अजंता(Ajanta) है ",
+                "options": ["केवल निष्कर्ष I अनुसरण करता है", "या तो निष्कर्ष I या II अनुसरण करता है", "केवल निष्कर्ष II अनुसरण करता है", "निष्कर्ष I और II दोनों अनुसरण करते हैं", "न तो निष्कर्ष I और न ही II अनुसरण करता है"],
+                "correctAnswer": 0,
+                "explanation": "D is the grandfather of A, making A the grandson of D."
+            }
+        },
+         {
+            "english": {
+                "text": "In each question, relationship between different elements is shown in the statements. The statements are followed by conclusions. Study the conclusions based on the given statements and select the appropriate answer.",
+                "question": "<b>Statements</b> \n   \n  \n  \n <b>Conclusions:</b> \nI).  \nII).  ",
+                "options": ["Only conclusion I is true", "Either conclusion I or II is true", "Only conclusion II is true", "Both conclusions I and II are true", "Neither conclusion I nor II is true"],
+                "correctAnswer": 0,
+                "explanation": "Each letter is represented by its position in the English alphabet (A=1, B=2, etc.)."
+            },
+            "hindi": {
+                "text": "िननिलिखत येक न म, िविभन तवों के बीच संबंध को कथनों म और उसके बाद दो िनकषो म िदखाया गया है। वह िनकष ात कीिजए जो िनिचत प से सय है।",
+                "question": "<b>कथन:</b> \n केवल कुछ ही बुलोवा(Bulova) टाइटन(Titan) है\n सभी टाइटन(Titan) अजंता(Ajanta) ह \n कोई अजंता(Ajanta) कैिसयो(Casio) नहीं है\n<b>निष्कर्ष:</b>\nI). कोई टाइटन(Titan) कैिसयो(Casio) नहीं है\nII). सभी बुलोवा(Bulova) अजंता(Ajanta) है ",
+                "options": ["केवल निष्कर्ष I अनुसरण करता है", "या तो निष्कर्ष I या II अनुसरण करता है", "केवल निष्कर्ष II अनुसरण करता है", "निष्कर्ष I और II दोनों अनुसरण करते हैं", "न तो निष्कर्ष I और न ही II अनुसरण करता है"],
+                "correctAnswer": 0,
+                "explanation": "D is the grandfather of A, making A the grandson of D."
+            }
+        },
+         {
+            "english": {
+                "text": "In each question, relationship between different elements is shown in the statements. The statements are followed by conclusions. Study the conclusions based on the given statements and select the appropriate answer.",
+                "question": "<b>Statements</b> \n   \n  \n  \n <b>Conclusions:</b> \nI).  \nII).  ",
+                "options": ["Only conclusion I is true", "Either conclusion I or II is true", "Only conclusion II is true", "Both conclusions I and II are true", "Neither conclusion I nor II is true"],
+                "correctAnswer": 0,
+                "explanation": "Each letter is represented by its position in the English alphabet (A=1, B=2, etc.)."
+            },
+            "hindi": {
+                "text": "िननिलिखत येक न म, िविभन तवों के बीच संबंध को कथनों म और उसके बाद दो िनकषो म िदखाया गया है। वह िनकष ात कीिजए जो िनिचत प से सय है।",
+                "question": "<b>कथन:</b> \n केवल कुछ ही बुलोवा(Bulova) टाइटन(Titan) है\n सभी टाइटन(Titan) अजंता(Ajanta) ह \n कोई अजंता(Ajanta) कैिसयो(Casio) नहीं है\n<b>निष्कर्ष:</b>\nI). कोई टाइटन(Titan) कैिसयो(Casio) नहीं है\nII). सभी बुलोवा(Bulova) अजंता(Ajanta) है ",
+                "options": ["केवल निष्कर्ष I अनुसरण करता है", "या तो निष्कर्ष I या II अनुसरण करता है", "केवल निष्कर्ष II अनुसरण करता है", "निष्कर्ष I और II दोनों अनुसरण करते हैं", "न तो निष्कर्ष I और न ही II अनुसरण करता है"],
+                "correctAnswer": 0,
+                "explanation": "D is the grandfather of A, making A the grandson of D."
+            }
+        },
+         {
+            "english": {
+                "text": "In each question, relationship between different elements is shown in the statements. The statements are followed by conclusions. Study the conclusions based on the given statements and select the appropriate answer.",
+                "question": "<b>Statements</b> \n   \n  \n  \n <b>Conclusions:</b> \nI).  \nII).  ",
+                "options": ["Only conclusion I is true", "Either conclusion I or II is true", "Only conclusion II is true", "Both conclusions I and II are true", "Neither conclusion I nor II is true"],
+                "correctAnswer": 0,
+                "explanation": "Each letter is represented by its position in the English alphabet (A=1, B=2, etc.)."
+            },
+            "hindi": {
+                "text": "िननिलिखत येक न म, िविभन तवों के बीच संबंध को कथनों म और उसके बाद दो िनकषो म िदखाया गया है। वह िनकष ात कीिजए जो िनिचत प से सय है।",
+                "question": "<b>कथन:</b> \n केवल कुछ ही बुलोवा(Bulova) टाइटन(Titan) है\n सभी टाइटन(Titan) अजंता(Ajanta) ह \n कोई अजंता(Ajanta) कैिसयो(Casio) नहीं है\n<b>निष्कर्ष:</b>\nI). कोई टाइटन(Titan) कैिसयो(Casio) नहीं है\nII). सभी बुलोवा(Bulova) अजंता(Ajanta) है ",
+                "options": ["केवल निष्कर्ष I अनुसरण करता है", "या तो निष्कर्ष I या II अनुसरण करता है", "केवल निष्कर्ष II अनुसरण करता है", "निष्कर्ष I और II दोनों अनुसरण करते हैं", "न तो निष्कर्ष I और न ही II अनुसरण करता है"],
+                "correctAnswer": 0,
+                "explanation": "D is the grandfather of A, making A the grandson of D."
+            }
+        },
+         {
+            "english": {
+                "text": "In each question, relationship between different elements is shown in the statements. The statements are followed by conclusions. Study the conclusions based on the given statements and select the appropriate answer.",
+                "question": "<b>Statements</b> \n   \n  \n  \n <b>Conclusions:</b> \nI).  \nII).  ",
+                "options": ["Only conclusion I is true", "Either conclusion I or II is true", "Only conclusion II is true", "Both conclusions I and II are true", "Neither conclusion I nor II is true"],
+                "correctAnswer": 0,
+                "explanation": "Each letter is represented by its position in the English alphabet (A=1, B=2, etc.)."
+            },
+            "hindi": {
+                "text": "िननिलिखत येक न म, िविभन तवों के बीच संबंध को कथनों म और उसके बाद दो िनकषो म िदखाया गया है। वह िनकष ात कीिजए जो िनिचत प से सय है।",
+                "question": "<b>कथन:</b> \n केवल कुछ ही बुलोवा(Bulova) टाइटन(Titan) है\n सभी टाइटन(Titan) अजंता(Ajanta) ह \n कोई अजंता(Ajanta) कैिसयो(Casio) नहीं है\n<b>निष्कर्ष:</b>\nI). कोई टाइटन(Titan) कैिसयो(Casio) नहीं है\nII). सभी बुलोवा(Bulova) अजंता(Ajanta) है ",
+                "options": ["केवल निष्कर्ष I अनुसरण करता है", "या तो निष्कर्ष I या II अनुसरण करता है", "केवल निष्कर्ष II अनुसरण करता है", "निष्कर्ष I और II दोनों अनुसरण करते हैं", "न तो निष्कर्ष I और न ही II अनुसरण करता है"],
+                "correctAnswer": 0,
+                "explanation": "D is the grandfather of A, making A the grandson of D."
+            }
+        },
+         {
+            "english": {
+                "text": "In each question, relationship between different elements is shown in the statements. The statements are followed by conclusions. Study the conclusions based on the given statements and select the appropriate answer.",
+                "question": "<b>Statements</b> \n   \n  \n  \n <b>Conclusions:</b> \nI).  \nII).  ",
+                "options": ["Only conclusion I is true", "Either conclusion I or II is true", "Only conclusion II is true", "Both conclusions I and II are true", "Neither conclusion I nor II is true"],
+                "correctAnswer": 0,
+                "explanation": "Each letter is represented by its position in the English alphabet (A=1, B=2, etc.)."
+            },
+            "hindi": {
+                "text": "िननिलिखत येक न म, िविभन तवों के बीच संबंध को कथनों म और उसके बाद दो िनकषो म िदखाया गया है। वह िनकष ात कीिजए जो िनिचत प से सय है।",
+                "question": "<b>कथन:</b> \n केवल कुछ ही बुलोवा(Bulova) टाइटन(Titan) है\n सभी टाइटन(Titan) अजंता(Ajanta) ह \n कोई अजंता(Ajanta) कैिसयो(Casio) नहीं है\n<b>निष्कर्ष:</b>\nI). कोई टाइटन(Titan) कैिसयो(Casio) नहीं है\nII). सभी बुलोवा(Bulova) अजंता(Ajanta) है ",
+                "options": ["केवल निष्कर्ष I अनुसरण करता है", "या तो निष्कर्ष I या II अनुसरण करता है", "केवल निष्कर्ष II अनुसरण करता है", "निष्कर्ष I और II दोनों अनुसरण करते हैं", "न तो निष्कर्ष I और न ही II अनुसरण करता है"],
+                "correctAnswer": 0,
+                "explanation": "D is the grandfather of A, making A the grandson of D."
+            }
+        },
+         {
+            "english": {
+                "text": "In each question, relationship between different elements is shown in the statements. The statements are followed by conclusions. Study the conclusions based on the given statements and select the appropriate answer.",
+                "question": "<b>Statements</b> \n   \n  \n  \n <b>Conclusions:</b> \nI).  \nII).  ",
+                "options": ["Only conclusion I is true", "Either conclusion I or II is true", "Only conclusion II is true", "Both conclusions I and II are true", "Neither conclusion I nor II is true"],
+                "correctAnswer": 0,
+                "explanation": "Each letter is represented by its position in the English alphabet (A=1, B=2, etc.)."
+            },
+            "hindi": {
+                "text": "िननिलिखत येक न म, िविभन तवों के बीच संबंध को कथनों म और उसके बाद दो िनकषो म िदखाया गया है। वह िनकष ात कीिजए जो िनिचत प से सय है।",
+                "question": "<b>कथन:</b> \n केवल कुछ ही बुलोवा(Bulova) टाइटन(Titan) है\n सभी टाइटन(Titan) अजंता(Ajanta) ह \n कोई अजंता(Ajanta) कैिसयो(Casio) नहीं है\n<b>निष्कर्ष:</b>\nI). कोई टाइटन(Titan) कैिसयो(Casio) नहीं है\nII). सभी बुलोवा(Bulova) अजंता(Ajanta) है ",
+                "options": ["केवल निष्कर्ष I अनुसरण करता है", "या तो निष्कर्ष I या II अनुसरण करता है", "केवल निष्कर्ष II अनुसरण करता है", "निष्कर्ष I और II दोनों अनुसरण करते हैं", "न तो निष्कर्ष I और न ही II अनुसरण करता है"],
+                "correctAnswer": 0,
+                "explanation": "D is the grandfather of A, making A the grandson of D."
+            }
+        },
+         {
+            "english": {
+                "text": "In each question, relationship between different elements is shown in the statements. The statements are followed by conclusions. Study the conclusions based on the given statements and select the appropriate answer.",
+                "question": "<b>Statements</b> \n   \n  \n  \n <b>Conclusions:</b> \nI).  \nII).  ",
+                "options": ["Only conclusion I is true", "Either conclusion I or II is true", "Only conclusion II is true", "Both conclusions I and II are true", "Neither conclusion I nor II is true"],
+                "correctAnswer": 0,
+                "explanation": "Each letter is represented by its position in the English alphabet (A=1, B=2, etc.)."
+            },
+            "hindi": {
+                "text": "िननिलिखत येक न म, िविभन तवों के बीच संबंध को कथनों म और उसके बाद दो िनकषो म िदखाया गया है। वह िनकष ात कीिजए जो िनिचत प से सय है।",
+                "question": "<b>कथन:</b> \n केवल कुछ ही बुलोवा(Bulova) टाइटन(Titan) है\n सभी टाइटन(Titan) अजंता(Ajanta) ह \n कोई अजंता(Ajanta) कैिसयो(Casio) नहीं है\n<b>निष्कर्ष:</b>\nI). कोई टाइटन(Titan) कैिसयो(Casio) नहीं है\nII). सभी बुलोवा(Bulova) अजंता(Ajanta) है ",
+                "options": ["केवल निष्कर्ष I अनुसरण करता है", "या तो निष्कर्ष I या II अनुसरण करता है", "केवल निष्कर्ष II अनुसरण करता है", "निष्कर्ष I और II दोनों अनुसरण करते हैं", "न तो निष्कर्ष I और न ही II अनुसरण करता है"],
+                "correctAnswer": 0,
+                "explanation": "D is the grandfather of A, making A the grandson of D."
+            }
+        },
+         {
+            "english": {
+                "text": "In each question, relationship between different elements is shown in the statements. The statements are followed by conclusions. Study the conclusions based on the given statements and select the appropriate answer.",
+                "question": "<b>Statements</b> \n   \n  \n  \n <b>Conclusions:</b> \nI).  \nII).  ",
+                "options": ["Only conclusion I is true", "Either conclusion I or II is true", "Only conclusion II is true", "Both conclusions I and II are true", "Neither conclusion I nor II is true"],
+                "correctAnswer": 0,
+                "explanation": "Each letter is represented by its position in the English alphabet (A=1, B=2, etc.)."
+            },
+            "hindi": {
+                "text": "िननिलिखत येक न म, िविभन तवों के बीच संबंध को कथनों म और उसके बाद दो िनकषो म िदखाया गया है। वह िनकष ात कीिजए जो िनिचत प से सय है।",
+                "question": "<b>कथन:</b> \n केवल कुछ ही बुलोवा(Bulova) टाइटन(Titan) है\n सभी टाइटन(Titan) अजंता(Ajanta) ह \n कोई अजंता(Ajanta) कैिसयो(Casio) नहीं है\n<b>निष्कर्ष:</b>\nI). कोई टाइटन(Titan) कैिसयो(Casio) नहीं है\nII). सभी बुलोवा(Bulova) अजंता(Ajanta) है ",
+                "options": ["केवल निष्कर्ष I अनुसरण करता है", "या तो निष्कर्ष I या II अनुसरण करता है", "केवल निष्कर्ष II अनुसरण करता है", "निष्कर्ष I और II दोनों अनुसरण करते हैं", "न तो निष्कर्ष I और न ही II अनुसरण करता है"],
+                "correctAnswer": 0,
+                "explanation": "D is the grandfather of A, making A the grandson of D."
+            }
+        },
+         {
+            "english": {
+                "text": "In each question, relationship between different elements is shown in the statements. The statements are followed by conclusions. Study the conclusions based on the given statements and select the appropriate answer.",
+                "question": "<b>Statements</b> \n   \n  \n  \n <b>Conclusions:</b> \nI).  \nII).  ",
+                "options": ["Only conclusion I is true", "Either conclusion I or II is true", "Only conclusion II is true", "Both conclusions I and II are true", "Neither conclusion I nor II is true"],
+                "correctAnswer": 0,
+                "explanation": "Each letter is represented by its position in the English alphabet (A=1, B=2, etc.)."
+            },
+            "hindi": {
+                "text": "िननिलिखत येक न म, िविभन तवों के बीच संबंध को कथनों म और उसके बाद दो िनकषो म िदखाया गया है। वह िनकष ात कीिजए जो िनिचत प से सय है।",
+                "question": "<b>कथन:</b> \n केवल कुछ ही बुलोवा(Bulova) टाइटन(Titan) है\n सभी टाइटन(Titan) अजंता(Ajanta) ह \n कोई अजंता(Ajanta) कैिसयो(Casio) नहीं है\n<b>निष्कर्ष:</b>\nI). कोई टाइटन(Titan) कैिसयो(Casio) नहीं है\nII). सभी बुलोवा(Bulova) अजंता(Ajanta) है ",
+                "options": ["केवल निष्कर्ष I अनुसरण करता है", "या तो निष्कर्ष I या II अनुसरण करता है", "केवल निष्कर्ष II अनुसरण करता है", "निष्कर्ष I और II दोनों अनुसरण करते हैं", "न तो निष्कर्ष I और न ही II अनुसरण करता है"],
+                "correctAnswer": 0,
+                "explanation": "D is the grandfather of A, making A the grandson of D."
+            }
+        },
+         {
+            "english": {
+                "text": "In each question, relationship between different elements is shown in the statements. The statements are followed by conclusions. Study the conclusions based on the given statements and select the appropriate answer.",
+                "question": "<b>Statements</b> \n   \n  \n  \n <b>Conclusions:</b> \nI).  \nII).  ",
+                "options": ["Only conclusion I is true", "Either conclusion I or II is true", "Only conclusion II is true", "Both conclusions I and II are true", "Neither conclusion I nor II is true"],
+                "correctAnswer": 0,
+                "explanation": "Each letter is represented by its position in the English alphabet (A=1, B=2, etc.)."
+            },
+            "hindi": {
+                "text": "िननिलिखत येक न म, िविभन तवों के बीच संबंध को कथनों म और उसके बाद दो िनकषो म िदखाया गया है। वह िनकष ात कीिजए जो िनिचत प से सय है।",
+                "question": "<b>कथन:</b> \n केवल कुछ ही बुलोवा(Bulova) टाइटन(Titan) है\n सभी टाइटन(Titan) अजंता(Ajanta) ह \n कोई अजंता(Ajanta) कैिसयो(Casio) नहीं है\n<b>निष्कर्ष:</b>\nI). कोई टाइटन(Titan) कैिसयो(Casio) नहीं है\nII). सभी बुलोवा(Bulova) अजंता(Ajanta) है ",
+                "options": ["केवल निष्कर्ष I अनुसरण करता है", "या तो निष्कर्ष I या II अनुसरण करता है", "केवल निष्कर्ष II अनुसरण करता है", "निष्कर्ष I और II दोनों अनुसरण करते हैं", "न तो निष्कर्ष I और न ही II अनुसरण करता है"],
+                "correctAnswer": 0,
+                "explanation": "D is the grandfather of A, making A the grandson of D."
+            }
+        },
+         {
+            "english": {
+                "text": "In each question, relationship between different elements is shown in the statements. The statements are followed by conclusions. Study the conclusions based on the given statements and select the appropriate answer.",
+                "question": "<b>Statements</b> \n   \n  \n  \n <b>Conclusions:</b> \nI).  \nII).  ",
+                "options": ["Only conclusion I is true", "Either conclusion I or II is true", "Only conclusion II is true", "Both conclusions I and II are true", "Neither conclusion I nor II is true"],
+                "correctAnswer": 0,
+                "explanation": "Each letter is represented by its position in the English alphabet (A=1, B=2, etc.)."
+            },
+            "hindi": {
+                "text": "िननिलिखत येक न म, िविभन तवों के बीच संबंध को कथनों म और उसके बाद दो िनकषो म िदखाया गया है। वह िनकष ात कीिजए जो िनिचत प से सय है।",
+                "question": "<b>कथन:</b> \n केवल कुछ ही बुलोवा(Bulova) टाइटन(Titan) है\n सभी टाइटन(Titan) अजंता(Ajanta) ह \n कोई अजंता(Ajanta) कैिसयो(Casio) नहीं है\n<b>निष्कर्ष:</b>\nI). कोई टाइटन(Titan) कैिसयो(Casio) नहीं है\nII). सभी बुलोवा(Bulova) अजंता(Ajanta) है ",
+                "options": ["केवल निष्कर्ष I अनुसरण करता है", "या तो निष्कर्ष I या II अनुसरण करता है", "केवल निष्कर्ष II अनुसरण करता है", "निष्कर्ष I और II दोनों अनुसरण करते हैं", "न तो निष्कर्ष I और न ही II अनुसरण करता है"],
+                "correctAnswer": 0,
+                "explanation": "D is the grandfather of A, making A the grandson of D."
+            }
+        },
+         {
+            "english": {
+                "text": "In each question, relationship between different elements is shown in the statements. The statements are followed by conclusions. Study the conclusions based on the given statements and select the appropriate answer.",
+                "question": "<b>Statements</b> \n   \n  \n  \n <b>Conclusions:</b> \nI).  \nII).  ",
+                "options": ["Only conclusion I is true", "Either conclusion I or II is true", "Only conclusion II is true", "Both conclusions I and II are true", "Neither conclusion I nor II is true"],
+                "correctAnswer": 0,
+                "explanation": "Each letter is represented by its position in the English alphabet (A=1, B=2, etc.)."
+            },
+            "hindi": {
+                "text": "िननिलिखत येक न म, िविभन तवों के बीच संबंध को कथनों म और उसके बाद दो िनकषो म िदखाया गया है। वह िनकष ात कीिजए जो िनिचत प से सय है।",
+                "question": "<b>कथन:</b> \n केवल कुछ ही बुलोवा(Bulova) टाइटन(Titan) है\n सभी टाइटन(Titan) अजंता(Ajanta) ह \n कोई अजंता(Ajanta) कैिसयो(Casio) नहीं है\n<b>निष्कर्ष:</b>\nI). कोई टाइटन(Titan) कैिसयो(Casio) नहीं है\nII). सभी बुलोवा(Bulova) अजंता(Ajanta) है ",
+                "options": ["केवल निष्कर्ष I अनुसरण करता है", "या तो निष्कर्ष I या II अनुसरण करता है", "केवल निष्कर्ष II अनुसरण करता है", "निष्कर्ष I और II दोनों अनुसरण करते हैं", "न तो निष्कर्ष I और न ही II अनुसरण करता है"],
+                "correctAnswer": 0,
+                "explanation": "D is the grandfather of A, making A the grandson of D."
+            }
+        },
+         {
+            "english": {
+                "text": "In each question, relationship between different elements is shown in the statements. The statements are followed by conclusions. Study the conclusions based on the given statements and select the appropriate answer.",
+                "question": "<b>Statements</b> \n   \n  \n  \n <b>Conclusions:</b> \nI).  \nII).  ",
+                "options": ["Only conclusion I is true", "Either conclusion I or II is true", "Only conclusion II is true", "Both conclusions I and II are true", "Neither conclusion I nor II is true"],
+                "correctAnswer": 0,
+                "explanation": "Each letter is represented by its position in the English alphabet (A=1, B=2, etc.)."
+            },
+            "hindi": {
+                "text": "िननिलिखत येक न म, िविभन तवों के बीच संबंध को कथनों म और उसके बाद दो िनकषो म िदखाया गया है। वह िनकष ात कीिजए जो िनिचत प से सय है।",
+                "question": "<b>कथन:</b> \n केवल कुछ ही बुलोवा(Bulova) टाइटन(Titan) है\n सभी टाइटन(Titan) अजंता(Ajanta) ह \n कोई अजंता(Ajanta) कैिसयो(Casio) नहीं है\n<b>निष्कर्ष:</b>\nI). कोई टाइटन(Titan) कैिसयो(Casio) नहीं है\nII). सभी बुलोवा(Bulova) अजंता(Ajanta) है ",
+                "options": ["केवल निष्कर्ष I अनुसरण करता है", "या तो निष्कर्ष I या II अनुसरण करता है", "केवल निष्कर्ष II अनुसरण करता है", "निष्कर्ष I और II दोनों अनुसरण करते हैं", "न तो निष्कर्ष I और न ही II अनुसरण करता है"],
+                "correctAnswer": 0,
+                "explanation": "D is the grandfather of A, making A the grandson of D."
+            }
+        },
+         {
+            "english": {
+                "text": "In each question, relationship between different elements is shown in the statements. The statements are followed by conclusions. Study the conclusions based on the given statements and select the appropriate answer.",
+                "question": "<b>Statements</b> \n   \n  \n  \n <b>Conclusions:</b> \nI).  \nII).  ",
+                "options": ["Only conclusion I is true", "Either conclusion I or II is true", "Only conclusion II is true", "Both conclusions I and II are true", "Neither conclusion I nor II is true"],
+                "correctAnswer": 0,
+                "explanation": "Each letter is represented by its position in the English alphabet (A=1, B=2, etc.)."
+            },
+            "hindi": {
+                "text": "िननिलिखत येक न म, िविभन तवों के बीच संबंध को कथनों म और उसके बाद दो िनकषो म िदखाया गया है। वह िनकष ात कीिजए जो िनिचत प से सय है।",
+                "question": "<b>कथन:</b> \n केवल कुछ ही बुलोवा(Bulova) टाइटन(Titan) है\n सभी टाइटन(Titan) अजंता(Ajanta) ह \n कोई अजंता(Ajanta) कैिसयो(Casio) नहीं है\n<b>निष्कर्ष:</b>\nI). कोई टाइटन(Titan) कैिसयो(Casio) नहीं है\nII). सभी बुलोवा(Bulova) अजंता(Ajanta) है ",
+                "options": ["केवल निष्कर्ष I अनुसरण करता है", "या तो निष्कर्ष I या II अनुसरण करता है", "केवल निष्कर्ष II अनुसरण करता है", "निष्कर्ष I और II दोनों अनुसरण करते हैं", "न तो निष्कर्ष I और न ही II अनुसरण करता है"],
+                "correctAnswer": 0,
+                "explanation": "D is the grandfather of A, making A the grandson of D."
+            }
+        }
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+    ]
+}
